@@ -119,6 +119,40 @@
     cursor: pointer;
 }
 
+@media (min-width:580px) {
+    .nav_hamburger {
+
+        font-size: 1.475rem;
+    }
+
+    .user_btn {
+        display: block;
+    }
+
+    .navbar_user_info {
+        gap: 1.25rem;
+
+        & :nth-child(2) {
+            display: flex;
+        }
+    }
+
+    .user_info_notification {
+        font-size: 1.65rem;
+
+        &::before {
+            width: 0.85rem;
+            height: 0.85rem;
+            border-radius: 50%;
+            top: 1px;
+            right: -2px;
+            font-size: 0.65rem;
+
+        }
+
+    }
+}
+
 @media (min-width:1024px) {
 
     .navbar_logo_info {
@@ -167,7 +201,7 @@
         gap: 0.35rem;
         padding: 0.5rem 1.25rem;
         font-size: 0.8125rem;
-        margin-left: 5rem;
+        margin-left: 3rem;
         background: #f7f7f7;
         border-radius: 3px;
         color: var(--sec_clr);
@@ -183,9 +217,7 @@
         }
     }
 
-    .user_btn {
-        display: block;
-    }
+
 
     .navbar_user_info {
         margin-right: 2rem;
