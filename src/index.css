@@ -83,7 +83,7 @@ h2 {
 h3 {
   font-size: 0.65rem;
   font-weight: 600;
-  color: var(--sec_clr);
+  color: var(--pri_clr);
 
 }
 
@@ -97,7 +97,7 @@ h4 {
 h5 {
   font-size: 0.5rem;
   font-weight: 600;
-  color: var(--sec_clr);
+  color: var(--pri_clr);
 }
 
 h6 {
