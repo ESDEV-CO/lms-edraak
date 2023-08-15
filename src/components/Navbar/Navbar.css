@@ -1,0 +1,43 @@
+.navbar {
+    display: flex;
+}
+
+.navbar_logo_info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.nav_hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.75rem;
+    height: 3.75rem;
+    line-height: 3.75rem;
+    font-size: 1.375rem;
+    background: var(--pri_bg);
+    color: white;
+    cursor: pointer;
+}
+
+.logo_wrapper,
+.logo_img {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo_img img {
+    width: 15%;
+    object-fit: cover;
+}
+
+.nav_category {
+    font-size: 1.5rem;
+    color: #686f7a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
