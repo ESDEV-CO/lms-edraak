@@ -11,6 +11,7 @@ import SideBar from "../Sidebar/SideBar";
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [isMessage, setIsMessage] = useState(false);
+  const [isNotification, setIsNotification] = useState(false);
 
   return (
     <>
@@ -49,7 +50,10 @@ const Navbar = () => {
           >
             <AiOutlineMail />
           </button>
-          <button className="user_info_notification">
+          <button
+            onClick={() => setIsNotification(!isNotification)}
+            className="user_info_notification"
+          >
             <IoMdNotificationsOutline />
           </button>
           <span className="user_dp">
@@ -76,7 +80,7 @@ const Navbar = () => {
             </div>
             <div className="message_toggle_user">
               <span className="toggle_user_img">
-                <img src={require("../../assets/img-5.jpg")} alt="img6" />
+                <img src={require("../../assets/img-5.jpg")} alt="img5" />
               </span>
               <span className="toggle_user_info">
                 <h6>Joy Dua</h6>
@@ -86,6 +90,59 @@ const Navbar = () => {
                 <span>10 min ago</span>
               </span>
             </div>
+            <div className="message_toggle_user">
+              <span className="toggle_user_img">
+                <img src={require("../../assets/img-8.jpg")} alt="img8" />
+              </span>
+              <span className="toggle_user_info">
+                <h6>Jass</h6>
+                <p>Thanks Sir, Such a nice video.</p>
+                <span>10 min ago</span>
+              </span>
+            </div>
+            <button className="primary_btn drop_down_btn">View All</button>
+          </div>
+        )}
+        {isNotification && (
+          <div className="notification_toggle">
+            <div className="message_toggle_user">
+              <span className="toggle_user_img">
+                <img src={require("../../assets/img-1.jpg")} alt="img1" />
+              </span>
+              <span className="toggle_user_info">
+                <h6>Rock William</h6>
+                <p>
+                  Like Your Comment On Video{" "}
+                  <strong>How to create sidebar menu</strong>.
+                </p>
+                <span>2 min ago</span>
+              </span>
+            </div>
+            <div className="message_toggle_user">
+              <span className="toggle_user_img">
+                <img src={require("../../assets/img-2.jpg")} alt="img2" />
+              </span>
+              <span className="toggle_user_info">
+                <h6>Jassica Smith</h6>
+                <p>
+                  Added New Review In Video{" "}
+                  <strong>Full Stack PHP Developer</strong>.
+                </p>
+                <span>12 min ago</span>
+              </span>
+            </div>
+            <div className="message_toggle_user">
+              <span className="toggle_user_img">
+                <img src={require("../../assets/img-9.jpg")} alt="img9" />
+              </span>
+              <span className="toggle_user_info">
+                <p>
+                  Your Membership Approved <strong>Upload Video</strong>.
+                </p>
+                <span>20 min ago</span>
+              </span>
+            </div>
+            <button className="primary_btn drop_down_btn">View All</button>
           </div>
         )}
       </div>
