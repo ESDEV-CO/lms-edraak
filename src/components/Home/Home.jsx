@@ -4,6 +4,7 @@ import { StreamData } from "../Stream/StreamData";
 import { GrFormNext } from "react-icons/gr";
 import { GrFormPrevious } from "react-icons/gr";
 import { CiMenuKebab } from "react-icons/ci";
+import { FaClockRotateLeft } from "react-icons/fa6";
 
 const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -65,7 +66,7 @@ const Home = () => {
           <div className="home_page_left_featured_courses">
             <div className="featured_courses">
               <img
-                src={require("../../assets/featured1.jpg")}
+                src={require("../../assets/featured3.jpg")}
                 alt="featured1"
               />
               <div className="featured_courses_views">
@@ -78,11 +79,106 @@ const Home = () => {
               <h5>
                 Complete Python Bootcamp: Go from zero to hero in Python 3
               </h5>
+              <span className="course_views">Web Development | Python</span>
+              <div className="course_author">
+                <span className="course_views">
+                  By <strong>John Doe</strong>
+                </span>
+                <span className="course_price">$5</span>
+              </div>
             </div>
+            <div className="featured_courses">
+              <img
+                src={require("../../assets/featured2.jpg")}
+                alt="featured2"
+              />
+              <div className="featured_courses_views">
+                <span className="course_views">5M Views.</span>
+                <span className="course_views">15 days ago</span>
+                <button className="course_share">
+                  <CiMenuKebab />
+                </button>
+              </div>
+              <h5>The Complete JavaScript Course 2020: Build Real Projects!</h5>
+              <span className="course_views">Development | JavaScript</span>
+              <div className="course_author">
+                <span className="course_views">
+                  By <strong>Jessica William</strong>
+                </span>
+                <span className="course_price">$10</span>
+              </div>
+            </div>
+            <button className="carousel_btn previous_btn">
+              <GrFormPrevious />
+            </button>
+            <button className="carousel_btn next_btn">
+              <GrFormNext />
+            </button>
           </div>
         </div>
-        <div className="home_page_left_"></div>
-        <div className="home_page_left_"></div>
+        <div className="home_page_left_featured_container">
+          <div className="home_page_left_heading">
+            <h4>Newest Courses</h4>
+            <button className="home_btn">See All</button>
+          </div>
+          <div className="home_page_left_featured_courses">
+            <div className="featured_courses">
+              <img
+                src={require("../../assets/featured4.jpg")}
+                alt="featured1"
+              />
+              <div className="featured_courses_views">
+                <span className="course_views">15 Views.</span>
+                <span className="course_views">10 min ago</span>
+                <button className="course_share">
+                  <CiMenuKebab />
+                </button>
+              </div>
+              <h5>Build Responsive Real World Websites with HTML5 and CSS3</h5>
+              <span className="course_views"> Development | CSS</span>
+              <div className="course_author">
+                <span className="course_views">
+                  By <strong>John Doe</strong>
+                </span>
+                <span className="course_price">$4</span>
+              </div>
+            </div>
+            <div className="featured_courses">
+              <img
+                src={require("../../assets/featured5.jpg")}
+                alt="featured2"
+              />
+              <div className="featured_courses_views">
+                <span className="course_views">5 Views.</span>
+                <span className="course_views">15 Min ago</span>
+                <button className="course_share">
+                  <CiMenuKebab />
+                </button>
+              </div>
+              <h5>The Complete JavaScript Course 2020: Build Real Projects!</h5>
+              <span className="course_views">Development | JavaScript</span>
+              <div className="course_author">
+                <span className="course_views">
+                  By <strong>Jessica William</strong>
+                </span>
+                <span className="course_price">$5</span>
+              </div>
+            </div>
+            <button className="carousel_btn previous_btn">
+              <GrFormPrevious />
+            </button>
+            <button className="carousel_btn next_btn">
+              <GrFormNext />
+            </button>
+          </div>
+        </div>
+        <div className="home_page_left_user_motivation">
+          <div className="user_motivation">
+            <span>
+              <FaClockRotateLeft />
+            </span>
+          </div>
+        </div>
         <div className="home_page_left_"></div>
         <div className="home_page_left_"></div>
       </section>
