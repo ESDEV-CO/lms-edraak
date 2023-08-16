@@ -5,6 +5,9 @@ import { GrFormNext } from "react-icons/gr";
 import { GrFormPrevious } from "react-icons/gr";
 import { CiMenuKebab } from "react-icons/ci";
 import { FaClockRotateLeft } from "react-icons/fa6";
+import { BiUserCheck } from "react-icons/bi";
+import { AiOutlinePlayCircle } from "react-icons/ai";
+import { PiMonitorPlayBold } from "react-icons/pi";
 
 const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -174,9 +177,32 @@ const Home = () => {
         </div>
         <div className="home_page_left_user_motivation">
           <div className="user_motivation">
-            <span>
+            <span className="motivation_logo">
               <FaClockRotateLeft />
             </span>
+            <h5>Go at your own pace</h5>
+            <p>Enjoy lifetime access to courses on Edututs+'s website</p>
+          </div>
+          <div className="user_motivation">
+            <span className="motivation_logo">
+              <BiUserCheck />
+            </span>
+            <h5>Learn from industry experts</h5>
+            <p>Select from top instructors around the world</p>
+          </div>
+          <div className="user_motivation">
+            <span className="motivation_logo">
+              <AiOutlinePlayCircle />
+            </span>
+            <h5>Find video courses on almost any topic</h5>
+            <p>Build your library for your career and personal growth</p>
+          </div>
+          <div className="user_motivation">
+            <span className="motivation_logo">
+              <PiMonitorPlayBold />
+            </span>
+            <h5>100,000 online courses</h5>
+            <p>Explore a variety of fresh topics</p>
           </div>
         </div>
         <div className="home_page_left_"></div>
