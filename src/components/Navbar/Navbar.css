@@ -159,6 +159,7 @@
 .toggle_sidebar {
     position: absolute;
     width: 100%;
+    z-index: 22;
 }
 
 .toggle_user_info {
