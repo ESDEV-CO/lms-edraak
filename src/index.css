@@ -110,10 +110,13 @@ h6 {
 }
 
 p {
-  font-size: 0.35rem;
-  font-weight: 300;
-  line-height: 0.5rem;
-  color: #616161;
+  font-size: 0.8125;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: #686f7a;
+  text-align: left;
+  margin-top: 0.5rem;
+  line-height: l.25rem;
 }
 
 .rights {
@@ -151,11 +154,7 @@ p {
     font-weight: 500;
   }
 
-  p {
-    font-size: 0.45rem;
-    font-weight: 400;
-    line-height: 0.65rem;
-  }
+
 }
 
 @media (min-width:640px) {
@@ -187,9 +186,7 @@ p {
     font-size: 0.85rem;
   }
 
-  p {
-    font-size: 0.5rem;
-  }
+
 }
 
 @media (min-width:768px) {
@@ -222,10 +219,6 @@ p {
     font-size: 0.75rem;
   }
 
-  p {
-    font-size: 0.85rem;
-    line-height: 0.95rem;
-  }
 }
 
 @media (min-width:1024px) {
@@ -260,11 +253,6 @@ p {
     font-weight: 500;
   }
 
-  p {
-    font-size: 0.95rem;
-    line-height: 100%;
-  }
-
   .rights {
     padding: 1.5rem 3rem;
   }
@@ -294,18 +282,13 @@ p {
   }
 
   h5 {
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-size: 1.15rem;
+    font-weight: 500;
   }
 
   h6 {
     font-size: 1rem;
-  }
-
-  p {
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 150%;
+    font-weight: 600;
   }
 
 
