@@ -156,6 +156,11 @@
     cursor: pointer;
 }
 
+.toggle_sidebar {
+    position: absolute;
+    width: 100%;
+}
+
 .toggle_user_info {
     display: flex;
     flex-direction: column;

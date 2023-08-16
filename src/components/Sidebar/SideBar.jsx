@@ -14,6 +14,7 @@ import { FiSettings } from "react-icons/fi";
 import { BiHelpCircle } from "react-icons/bi";
 import { MdReportGmailerrorred } from "react-icons/md";
 import { TbMessageReport } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 const SideBar = () => {
   const [isCategories, setIsCategories] = useState(false);
@@ -22,12 +23,12 @@ const SideBar = () => {
   return (
     <div className="sidebar">
       <div className="sidebar_categories">
-        <button className="sidebar_categories_span">
+        <Link to={"/"} className="sidebar_categories_span">
           <span className="sidebar_logo">
             <BiHomeAlt />
           </span>
           <h5>Home</h5>
-        </button>
+        </Link>
         <button className="sidebar_categories_span">
           <span className="sidebar_logo">
             <CiStreamOn />

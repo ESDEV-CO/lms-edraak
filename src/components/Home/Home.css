@@ -1,0 +1,26 @@
+.home_page {
+    padding: 1.5rem 2rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.home_page_left {
+    flex: 7;
+}
+
+.home_page_right {
+    flex: 3;
+}
+
+.home_btn {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #afafaf;
+    text-align: right;
+}
+
+.home_page_left_live_stream {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
