@@ -38,7 +38,7 @@ const Navbar = () => {
           />
         </div>
         <div className="navbar_user_info">
-          <button className="user_btn">Create New Course</button>
+          <button className="primary_btn user_btn">Create New Course</button>
           <span className="user_info_notification">
             <AiOutlineShoppingCart />
           </span>

@@ -8,9 +8,9 @@ function HomeScreen() {
     <div className="store_container">
       <Navbar />
       {/* <Home /> */}
-      <div className="footer_wrapper">
+      {/* <div className="footer_wrapper">
         <Footer />
-      </div>
+      </div> */}
     </div>
   );
 }
