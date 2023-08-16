@@ -1,8 +1,16 @@
 .sidebar {
     width: 18%;
-    height: 100vh;
+    height: 100svh;
     background: white;
+    overflow-y: scroll;
+    padding-bottom: 1rem;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
 }
+
 
 .sidebar_logo,
 .drop_down {
@@ -27,6 +35,7 @@
     cursor: pointer;
     padding: 1rem;
     background: white;
+    width: 100%;
 
     &:hover,
     &:focus,
@@ -66,10 +75,55 @@
 }
 
 .sidebar_subscription {
+    border-bottom: 1px solid rgba(177, 177, 177, 0.5);
+
     & h6 {
         padding: 1rem;
         text-transform: uppercase;
         color: var(--sec_clr);
         font-size: 0.85rem;
     }
+}
+
+.sidebar_logo img {
+    width: 2rem;
+}
+
+.online_status {
+    color: var(--pri_bg);
+    font-size: 0.75rem;
+    margin-left: auto;
+}
+
+.sidebar_setting {
+    border-bottom: 1px solid rgba(177, 177, 177, 0.5);
+}
+
+.sidebar_footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1rem;
+
+
+    & li {
+        cursor: pointer;
+        font-size: 0.8125rem;
+        font-weight: 500;
+        text-align: left;
+        color: #333;
+        transition: 0.3s;
+
+        &:hover {
+            color: var(--pri_bg);
+        }
+    }
+}
+
+.sidebar_rights {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #afafaf;
+    text-align: left;
+    padding: 1rem;
 }

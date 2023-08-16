@@ -5,7 +5,7 @@ import Footer from "../components/Footer/Footer";
 
 function HomeScreen() {
   return (
-    <div className="store_container">
+    <div className="home_container">
       <Navbar />
       {/* <Home /> */}
       {/* <div className="footer_wrapper">
