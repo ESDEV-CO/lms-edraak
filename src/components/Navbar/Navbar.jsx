@@ -64,7 +64,7 @@ const Navbar = () => {
       <div>
         <div className="toggle_sidebar">{toggle && <SideBar />}</div>
         {isMessage && (
-          <div className="message_toggle">
+          <div className="message_toggle box_shadow">
             <div className="message_toggle_user">
               <span className="toggle_user_img">
                 <img src={require("../../assets/img-6.jpg")} alt="img6" />
@@ -104,7 +104,7 @@ const Navbar = () => {
           </div>
         )}
         {isNotification && (
-          <div className="notification_toggle">
+          <div className="notification_toggle box_shadow">
             <div className="message_toggle_user">
               <span className="toggle_user_img">
                 <img src={require("../../assets/img-1.jpg")} alt="img1" />

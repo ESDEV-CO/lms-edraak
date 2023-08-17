@@ -95,7 +95,7 @@ const Home = () => {
               ).map((item) => {
                 return (
                   <div className="home_stream_info_wrapper">
-                    <div className="home_stream_info">
+                    <div className="home_stream_info ">
                       <img src={item?.image} alt="" />
                       <h6>{item?.name}</h6>
                       <span className="stream_status"> Live</span>
@@ -105,14 +105,14 @@ const Home = () => {
               })}
               <button
                 onClick={streamPrevious}
-                className="carousel_btn previous_btn"
+                className="carousel_btn box_shadow previous_btn"
                 disabled={currentIndex1 === 0}
               >
                 <GrFormPrevious />
               </button>
               <button
                 onClick={streamNext}
-                className="carousel_btn next_btn"
+                className="carousel_btn box_shadow next_btn"
                 disabled={currentIndex1 === StreamData.length - 2}
               >
                 <GrFormNext />
@@ -130,7 +130,7 @@ const Home = () => {
                 currentIndex2 + featureToShow
               ).map((item) => {
                 return (
-                  <div className="featured_courses">
+                  <div className="featured_courses box_shadow">
                     <img src={item?.image} alt="featured_img" />
                     <div className="featured_courses_views">
                       <h6 className="course_views">{`${item?.views} Views`}</h6>
@@ -152,14 +152,14 @@ const Home = () => {
               })}
               <button
                 onClick={featuredPrevious}
-                className="carousel_btn previous_btn"
+                className="carousel_btn box_shadow previous_btn"
                 disabled={currentIndex2 === 0}
               >
                 <GrFormPrevious />
               </button>
               <button
                 onClick={featuredNext}
-                className="carousel_btn next_btn"
+                className="carousel_btn box_shadow next_btn"
                 disabled={currentIndex2 === FeaturedData.length - 2}
               >
                 <GrFormNext />
@@ -199,14 +199,14 @@ const Home = () => {
               })}
               <button
                 onClick={newestPrevious}
-                className="carousel_btn previous_btn"
+                className="carousel_btn box_shadow previous_btn"
                 disabled={currentIndex3 === 0}
               >
                 <GrFormPrevious />
               </button>
               <button
                 onClick={newestNext}
-                className="carousel_btn next_btn"
+                className="carousel_btn box_shadow next_btn"
                 disabled={currentIndex3 === Newest_dData.length - 2}
               >
                 <GrFormNext />
@@ -214,28 +214,28 @@ const Home = () => {
             </div>
           </div>
           <div className="home_page_left_user_motivation">
-            <div className="user_motivation">
+            <div className="user_motivation box_shadow">
               <span className="motivation_logo">
                 <FaClockRotateLeft />
               </span>
               <h5>Go at your own pace</h5>
               <p>Enjoy lifetime access to courses on Edututs+'s website</p>
             </div>
-            <div className="user_motivation">
+            <div className="user_motivation box_shadow">
               <span className="motivation_logo">
                 <BiUserCheck />
               </span>
               <h5>Learn from industry experts</h5>
               <p>Select from top instructors around the world</p>
             </div>
-            <div className="user_motivation">
+            <div className="user_motivation box_shadow">
               <span className="motivation_logo">
                 <AiOutlinePlayCircle />
               </span>
               <h5>Find video courses on almost any topic</h5>
               <p>Build your library for your career and personal growth</p>
             </div>
-            <div className="user_motivation">
+            <div className="user_motivation box_shadow">
               <span className="motivation_logo">
                 <PiMonitorPlayBold />
               </span>
@@ -254,7 +254,7 @@ const Home = () => {
                 currentIndex4 + featureToShow
               ).map((item) => {
                 return (
-                  <div className=" popular_instructor">
+                  <div className=" popular_instructor box_shadow">
                     <img src={item?.image} alt="instructor_img" />
                     <span className="instructor_info">
                       <h5>{item?.name}</h5>
@@ -298,14 +298,14 @@ const Home = () => {
               })}
               <button
                 onClick={instPrevious}
-                className="carousel_btn previous_btn"
+                className="carousel_btn box_shadow previous_btn"
                 disabled={currentIndex4 === 0}
               >
                 <GrFormPrevious />
               </button>
               <button
                 onClick={instNext}
-                className="carousel_btn next_btn"
+                className="carousel_btn box_shadow next_btn"
                 disabled={currentIndex4 === StreamData.length - 1}
               >
                 <GrFormNext />
@@ -315,7 +315,7 @@ const Home = () => {
         </section>
         <section className="home_page_right">
           <div className="home_page_right_instructor">
-            <div className=" popular_instructor right_instructor">
+            <div className=" popular_instructor right_instructor box_shadow">
               <img
                 src={require("../../assets/img-17.jpg")}
                 alt="instructor_img"
@@ -360,9 +360,9 @@ const Home = () => {
               <button>Go To Profile</button>
             </div>
           </div>
-          <div className="home_page_right_stream">
+          <div className="home_page_right_stream box_shadow">
             <span className="stream_heading">
-              <h6>Live Streaming</h6>
+              <h5>Live Streaming</h5>
             </span>
             <span className="stream_logo">
               <CiStreamOn />
@@ -378,8 +378,8 @@ const Home = () => {
             <p>Answer a few questions for your top picks</p>
             <button className="primary_btn">Get Started</button>
           </div>
-          <div className="home_page_right_stream">
-            <span className="stream_heading top_categories_heading">
+          <div className="home_page_right_stream box_shadow">
+            <span className="stream_heading ">
               <h5>Top Categories</h5>
             </span>
             <span className="top_categories">
@@ -407,7 +407,7 @@ const Home = () => {
               <FiMusic /> Music
             </span>
           </div>
-          <div className="home_page_right_stream">
+          <div className="home_page_right_stream box_shadow">
             <h4>Become an Instructor</h4>
             <p>
               Top instructors from around the world teach millions of students
@@ -420,7 +420,7 @@ const Home = () => {
       <section className="home_page_bottom">
         <h4>What Our Student Have Today</h4>
         <div className="student_review_wrapper">
-          <div className="student_review">
+          <div className="student_review box_shadow">
             <p>
               "Donec ac ex eu arcu euismod feugiat. In venenatis bibendum nisi,
               in placerat eros ultricies vitae. Praesent pellentesque blandit
@@ -431,7 +431,7 @@ const Home = () => {
               <h5>Rock Smith</h5>
             </span>
           </div>
-          <div className="student_review">
+          <div className="student_review box_shadow">
             <p>
               "Donec ac ex eu arcu euismod feugiat. In venenatis bibendum nisi,
               in placerat eros ultricies vitae. Praesent pellentesque blandit
@@ -442,7 +442,7 @@ const Home = () => {
               <h5>Jassica William</h5>
             </span>
           </div>
-          <div className="student_review">
+          <div className="student_review box_shadow">
             <p>
               "Donec ac ex eu arcu euismod feugiat. In venenatis bibendum nisi,
               in placerat eros ultricies vitae. Praesent pellentesque blandit
@@ -453,10 +453,10 @@ const Home = () => {
               <h5>john William</h5>
             </span>
           </div>
-          <button className="carousel_btn previous_btn">
+          <button className="carousel_btn box_shadow previous_btn">
             <GrFormPrevious />
           </button>
-          <button className="carousel_btn next_btn">
+          <button className="carousel_btn box_shadow next_btn">
             <GrFormNext />
           </button>
         </div>

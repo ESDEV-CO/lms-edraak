@@ -123,6 +123,15 @@ p {
   padding: 1rem;
 }
 
+.box_shadow {
+  background: white;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1),
+    /* Left shadow */
+    -2px 2px 4px rgba(0, 0, 0, 0.1),
+    /* Right shadow */
+    0 4px 4px rgba(0, 0, 0, 0.1);
+  /* Bottom shadow */
+}
 
 @media (min-width:640px) {
   h1 {

@@ -4,8 +4,6 @@
     flex-direction: column;
     gap: 1.5rem;
     overflow-x: hidden;
-
-
 }
 
 .home_page_top {
@@ -106,15 +104,8 @@
     width: 1.5rem;
     height: 1.5rem;
     display: flex;
-    background: white;
     align-items: center;
     justify-content: center;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1),
-        /* Left shadow */
-        -2px 2px 4px rgba(0, 0, 0, 0.1),
-        /* Right shadow */
-        0 4px 4px rgba(0, 0, 0, 0.1);
-    /* Bottom shadow */
     border-radius: 2px;
     transition: 0.3s;
 }
@@ -130,7 +121,6 @@
     left: 0.5%;
     bottom: 50%;
     z-index: 1;
-
 }
 
 .next_btn {
@@ -146,7 +136,6 @@
     gap: 1rem;
 }
 
-
 .featured_carousel {
     display: flex;
     overflow: hidden;
@@ -160,24 +149,14 @@
     gap: 0.5rem;
     padding: 1rem;
     width: 98%;
-    background: white;
     cursor: pointer;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1),
-        /* Left shadow */
-        -2px 2px 4px rgba(0, 0, 0, 0.1),
-        /* Right shadow */
-        0 4px 4px rgba(0, 0, 0, 0.1);
-    /* Bottom shadow */
     border-radius: 5px;
     transition: 0.3s;
 
     & h5 {
         font-weight: 600;
         color: var(--pri_clr);
-
     }
-
-
 
     &:hover {
         transform: translateY(2px);
@@ -200,7 +179,6 @@
     justify-content: space-between;
 }
 
-
 .course_share {
     display: flex;
     align-items: center;
@@ -208,36 +186,24 @@
     font-size: 1rem;
     color: #686f7a;
     margin-left: auto;
-
 }
 
 /* user motivation css */
 .home_page_left_user_motivation {
-    /* display: flex; */
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(265px, 1fr));
     gap: 1.5rem;
-    /* flex-wrap: wrap; */
-    /* margin-top: 1.5rem; */
 }
 
 .user_motivation {
     padding: 1rem;
-    background: white;
     cursor: pointer;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1),
-        /* Left shadow */
-        -2px 2px 4px rgba(0, 0, 0, 0.1),
-        /* Right shadow */
-        0 4px 4px rgba(0, 0, 0, 0.1);
-    /* Bottom shadow */
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
 
-    /* width: 50%; */
     & p {
         text-align: center;
     }
@@ -251,8 +217,6 @@
     font-size: 1.75rem;
     padding: 1rem;
     border-radius: 3px;
-
-
 }
 
 .popular_instructor {
@@ -262,14 +226,7 @@
     gap: 0.5rem;
     padding: 1.5rem 3rem;
     width: 100%;
-    background: white;
     cursor: pointer;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1),
-        /* Left shadow */
-        -2px 2px 4px rgba(0, 0, 0, 0.1),
-        /* Right shadow */
-        0 4px 4px rgba(0, 0, 0, 0.1);
-    /* Bottom shadow */
     border-radius: 5px;
     transition: 0.3s;
 
@@ -345,14 +302,7 @@
     gap: 1rem;
     padding: 1.5rem 3rem;
     width: 100%;
-    background: white;
     cursor: pointer;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1),
-        /* Left shadow */
-        -2px 2px 4px rgba(0, 0, 0, 0.1),
-        /* Right shadow */
-        0 4px 4px rgba(0, 0, 0, 0.1);
-    /* Bottom shadow */
     border-radius: 5px;
 
     & p {
@@ -368,11 +318,6 @@
     align-self: flex-start;
     border-bottom: 1px solid rgba(177, 177, 177, 0.5);
     padding-bottom: 1rem;
-    color: white;
-}
-
-.top_categories_heading {
-    color: var(--pri_clr);
 }
 
 .stream_logo {
@@ -401,11 +346,8 @@
     background: #292C35;
     cursor: pointer;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1),
-        /* Left shadow */
         -2px 2px 4px rgba(0, 0, 0, 0.1),
-        /* Right shadow */
         0 4px 4px rgba(0, 0, 0, 0.1);
-    /* Bottom shadow */
     border-radius: 5px;
     color: white;
 
@@ -465,15 +407,7 @@
     flex-direction: column;
     gap: 0.5rem;
     padding: 1.5rem;
-    /* width: 30%; */
-    background: white;
     cursor: pointer;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1),
-        /* Left shadow */
-        -2px 2px 4px rgba(0, 0, 0, 0.1),
-        /* Right shadow */
-        0 4px 4px rgba(0, 0, 0, 0.1);
-    /* Bottom shadow */
     border-radius: 5px;
 
     & p {
@@ -497,20 +431,17 @@
 @media (min-width:1024px) {
     .home_page {
         padding: 1.5rem 2rem;
-        display: flex;
         flex-direction: column;
         gap: 1.5rem;
     }
 
     .home_page_top {
-        display: flex;
         flex-direction: row;
         gap: 1.5rem;
 
     }
 
     .home_page_left {
-        display: flex;
         flex-direction: column;
         gap: 1.5rem;
         width: 70%;
@@ -519,8 +450,6 @@
     .home_page_right {
         width: 30%;
         padding-right: 1rem;
-        display: flex;
-        flex-direction: column;
         gap: 1.5rem;
     }
 
@@ -532,22 +461,7 @@
     }
 
     .home_page_left_live_stream_container {
-        display: flex;
-        flex-direction: column;
         gap: 1rem;
-    }
-
-    .home_page_left_heading {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .stream_carousel {
-        display: flex;
-        overflow: hidden;
-        gap: 0.5rem;
-        position: relative;
     }
 
     .home_stream_info_wrapper {
@@ -597,15 +511,8 @@
         width: 1.5rem;
         height: 1.5rem;
         display: flex;
-        background: white;
         align-items: center;
         justify-content: center;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1),
-            /* Left shadow */
-            -2px 2px 4px rgba(0, 0, 0, 0.1),
-            /* Right shadow */
-            0 4px 4px rgba(0, 0, 0, 0.1);
-        /* Bottom shadow */
         border-radius: 2px;
         transition: 0.3s;
     }
@@ -649,14 +556,7 @@
         gap: 0.5rem;
         padding: 1rem;
         width: 31%;
-        background: white;
         cursor: pointer;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1),
-            /* Left shadow */
-            -2px 2px 4px rgba(0, 0, 0, 0.1),
-            /* Right shadow */
-            0 4px 4px rgba(0, 0, 0, 0.1);
-        /* Bottom shadow */
         border-radius: 5px;
         transition: 0.3s;
 
@@ -693,24 +593,15 @@
 
     /* user motivation css */
     .home_page_left_user_motivation {
-        /* display: flex; */
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
         gap: 1.5rem;
-        /* flex-wrap: wrap; */
         margin-top: 1.5rem;
     }
 
     .user_motivation {
         padding: 1.5rem 2.5rem;
-        background: white;
         cursor: pointer;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1),
-            /* Left shadow */
-            -2px 2px 4px rgba(0, 0, 0, 0.1),
-            /* Right shadow */
-            0 4px 4px rgba(0, 0, 0, 0.1);
-        /* Bottom shadow */
         border-radius: 5px;
         display: flex;
         flex-direction: column;
@@ -736,14 +627,7 @@
         gap: 0.5rem;
         padding: 1.5rem 3rem;
         width: 100%;
-        background: white;
         cursor: pointer;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1),
-            /* Left shadow */
-            -2px 2px 4px rgba(0, 0, 0, 0.1),
-            /* Right shadow */
-            0 4px 4px rgba(0, 0, 0, 0.1);
-        /* Bottom shadow */
         border-radius: 5px;
         transition: 0.3s;
 
@@ -813,21 +697,9 @@
     }
 
     .home_page_right_stream {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         gap: 1rem;
         padding: 1.5rem 3rem;
         width: 100%;
-        background: white;
-        cursor: pointer;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1),
-            /* Left shadow */
-            -2px 2px 4px rgba(0, 0, 0, 0.1),
-            /* Right shadow */
-            0 4px 4px rgba(0, 0, 0, 0.1);
-        /* Bottom shadow */
-        border-radius: 5px;
 
         & p {
             font-size: 14px;
@@ -867,14 +739,6 @@
         gap: 1rem;
         padding: 1.5rem 3rem;
         width: 100%;
-        background: #292C35;
-        cursor: pointer;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1),
-            /* Left shadow */
-            -2px 2px 4px rgba(0, 0, 0, 0.1),
-            /* Right shadow */
-            0 4px 4px rgba(0, 0, 0, 0.1);
-        /* Bottom shadow */
         border-radius: 5px;
         color: white;
 
@@ -930,14 +794,7 @@
         gap: 0.5rem;
         padding: 1.5rem;
         width: 30%;
-        background: white;
         cursor: pointer;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1),
-            /* Left shadow */
-            -2px 2px 4px rgba(0, 0, 0, 0.1),
-            /* Right shadow */
-            0 4px 4px rgba(0, 0, 0, 0.1);
-        /* Bottom shadow */
         border-radius: 5px;
 
         & p {
