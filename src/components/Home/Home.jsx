@@ -404,6 +404,14 @@ const Home = () => {
             <FiMusic /> Music
           </span>
         </div>
+        <div className="home_page_right_stream">
+          <h4>Become an Instructor</h4>
+          <p>
+            Top instructors from around the world teach millions of students on
+            Cursus. We provide the tools and skills to teach what you love.
+          </p>
+          <button className="primary_btn">Start Teaching</button>
+        </div>
       </section>
     </div>
   );

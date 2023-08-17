@@ -144,7 +144,7 @@
     flex-direction: column;
     gap: 0.5rem;
     padding: 1rem;
-    width: 30%;
+    width: 31%;
     background: white;
     cursor: pointer;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1),
@@ -396,12 +396,11 @@
         max-width: 70%;
     }
 
-    & button {
-        &:hover {
-            background: #C72127;
-        }
+    & button:hover {
+        background: #C72127;
     }
 }
+
 
 .top_categories {
     display: flex;
