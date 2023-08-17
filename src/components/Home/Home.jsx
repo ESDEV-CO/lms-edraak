@@ -379,7 +379,7 @@ const Home = () => {
             <button className="primary_btn">Get Started</button>
           </div>
           <div className="home_page_right_stream">
-            <span className="stream_heading">
+            <span className="stream_heading top_categories_heading">
               <h5>Top Categories</h5>
             </span>
             <span className="top_categories">

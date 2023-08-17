@@ -123,39 +123,6 @@ p {
   padding: 1rem;
 }
 
-@media (min-width:426px) {
-  h1 {
-    font-size: 1rem;
-    font-weight: 600;
-    line-height: 1rem;
-  }
-
-  h2 {
-    font-size: 0.95rem;
-  }
-
-  h3 {
-    font-size: 0.85rem;
-
-  }
-
-  h4 {
-    font-size: 0.75rem;
-
-  }
-
-  h5 {
-    font-size: 0.65rem;
-
-  }
-
-  h6 {
-    font-size: 0.65rem;
-    font-weight: 500;
-  }
-
-
-}
 
 @media (min-width:640px) {
   h1 {
