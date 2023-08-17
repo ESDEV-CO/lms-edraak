@@ -16,6 +16,15 @@ import { AiOutlineTwitter } from "react-icons/ai";
 import { BiLogoLinkedin } from "react-icons/bi";
 import { FaYoutube } from "react-icons/fa";
 import { TbCircleCheck } from "react-icons/tb";
+import { CiStreamOn } from "react-icons/ci";
+import { PiBracketsAngleBold } from "react-icons/pi";
+import { BiBarChartAlt2 } from "react-icons/bi";
+import { BiDesktop } from "react-icons/bi";
+import { MdOutlineDesignServices } from "react-icons/md";
+import { BiLineChart } from "react-icons/bi";
+import { PiBookOpenTextBold } from "react-icons/pi";
+import { AiOutlineCamera } from "react-icons/ai";
+import { FiMusic } from "react-icons/fi";
 
 const Home = () => {
   const [currentIndex1, setCurrentIndex1] = useState(0);
@@ -348,9 +357,53 @@ const Home = () => {
             <button>Go To Profile</button>
           </div>
         </div>
-        <div className="home_page_right_"></div>
-        <div className="home_page_right_"></div>
-        <div className="home_page_right_"></div>
+        <div className="home_page_right_stream">
+          <span className="stream_heading">
+            <h5>Live Streaming</h5>
+          </span>
+          <span className="stream_logo">
+            <CiStreamOn />
+          </span>
+          <p>Set up your channel and stream live to your students</p>
+          <button className="primary_btn">Get Started</button>
+          <span className="stream_info">
+            Info : This feature only for 'Instructors'.
+          </span>
+        </div>
+        <div className="home_page_right_recommendation">
+          <h5>Get personalized recommendations</h5>
+          <p>Answer a few questions for your top picks</p>
+          <button className="primary_btn">Get Started</button>
+        </div>
+        <div className="home_page_right_stream">
+          <span className="stream_heading">
+            <h5>Top Categories</h5>
+          </span>
+          <span className="top_categories">
+            <PiBracketsAngleBold /> Development
+          </span>
+          <span className="top_categories">
+            <BiBarChartAlt2 /> Business
+          </span>
+          <span className="top_categories">
+            <BiDesktop /> IT & Software
+          </span>
+          <span className="top_categories">
+            <MdOutlineDesignServices /> Design
+          </span>
+          <span className="top_categories">
+            <BiLineChart /> Marketing
+          </span>
+          <span className="top_categories">
+            <PiBookOpenTextBold /> Personal Development
+          </span>
+          <span className="top_categories">
+            <AiOutlineCamera /> Photography
+          </span>
+          <span className="top_categories">
+            <FiMusic /> Music
+          </span>
+        </div>
       </section>
     </div>
   );
