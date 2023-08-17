@@ -133,19 +133,19 @@ const Home = () => {
                   <div className="featured_courses">
                     <img src={item?.image} alt="featured_img" />
                     <div className="featured_courses_views">
-                      <span className="course_views">{item?.views}</span>
-                      <span className="course_views">{item?.time}</span>
+                      <h6 className="course_views">{`${item?.views} Views`}</h6>
+                      <h6 className="course_views">{item?.time}</h6>
                       <button className="course_share">
                         <CiMenuKebab />
                       </button>
                     </div>
                     <h5>{item?.course_name}</h5>
-                    <span className="course_views">{item?.description}</span>
+                    <h6 className="course_views">{item?.description}</h6>
                     <div className="course_author">
-                      <span className="course_views">
+                      <h6 className="course_views">
                         By <strong>{item?.instructor_name}</strong>
-                      </span>
-                      <span className="course_price">{item?.price}</span>
+                      </h6>
+                      <h5 className="course_price">{item?.price}</h5>
                     </div>
                   </div>
                 );
@@ -180,19 +180,19 @@ const Home = () => {
                   <div className="featured_courses">
                     <img src={item?.image} alt="featured_img" />
                     <div className="featured_courses_views">
-                      <span className="course_views">{item?.views}</span>
-                      <span className="course_views">{item?.time}</span>
+                      <h6 className="course_views">{`${item?.views} Views`}</h6>
+                      <h6 className="course_views">{item?.time}</h6>
                       <button className="course_share">
                         <CiMenuKebab />
                       </button>
                     </div>
                     <h5>{item?.course_name}</h5>
-                    <span className="course_views">{item?.description}</span>
+                    <h6 className="course_views">{item?.description}</h6>
                     <div className="course_author">
-                      <span className="course_views">
+                      <h6 className="course_views">
                         By <strong>{item?.instructor_name}</strong>
-                      </span>
-                      <span className="course_price">{item?.price}</span>
+                      </h6>
+                      <h5 className="course_price">{item?.price}</h5>
                     </div>
                   </div>
                 );
@@ -362,7 +362,7 @@ const Home = () => {
           </div>
           <div className="home_page_right_stream">
             <span className="stream_heading">
-              <h5>Live Streaming</h5>
+              <h6>Live Streaming</h6>
             </span>
             <span className="stream_logo">
               <CiStreamOn />
@@ -418,7 +418,48 @@ const Home = () => {
         </section>
       </section>
       <section className="home_page_bottom">
-        <h5>What Our Student Have Today</h5>
+        <h4>What Our Student Have Today</h4>
+        <div className="student_review_wrapper">
+          <div className="student_review">
+            <p>
+              "Donec ac ex eu arcu euismod feugiat. In venenatis bibendum nisi,
+              in placerat eros ultricies vitae. Praesent pellentesque blandit
+              scelerisque. Suspendisse potenti."
+            </p>
+            <span className="student_info">
+              <img src={require("../../assets/img-2.jpg")} alt="img1" />
+              <h5>Rock Smith</h5>
+            </span>
+          </div>
+          <div className="student_review">
+            <p>
+              "Donec ac ex eu arcu euismod feugiat. In venenatis bibendum nisi,
+              in placerat eros ultricies vitae. Praesent pellentesque blandit
+              scelerisque. Suspendisse potenti."
+            </p>
+            <span className="student_info">
+              <img src={require("../../assets/img-1.jpg")} alt="img1" />
+              <h5>Jassica William</h5>
+            </span>
+          </div>
+          <div className="student_review">
+            <p>
+              "Donec ac ex eu arcu euismod feugiat. In venenatis bibendum nisi,
+              in placerat eros ultricies vitae. Praesent pellentesque blandit
+              scelerisque. Suspendisse potenti."
+            </p>
+            <span className="student_info">
+              <img src={require("../../assets/img-5.jpg")} alt="img1" />
+              <h5>john William</h5>
+            </span>
+          </div>
+          <button className="carousel_btn previous_btn">
+            <GrFormPrevious />
+          </button>
+          <button className="carousel_btn next_btn">
+            <GrFormNext />
+          </button>
+        </div>
       </section>
     </div>
   );

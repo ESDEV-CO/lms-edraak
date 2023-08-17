@@ -2,7 +2,7 @@ export const StreamData = [
   {
     id: 1,
     name: "John Doe",
-    description: "Wordpress & Plugin Tutor",
+    description: "Language Learning Coach, Writer, Online Tutor",
     image: require("../../assets/img-1.jpg"),
     students: "100k",
     courses: "15",
