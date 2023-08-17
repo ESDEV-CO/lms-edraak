@@ -11,11 +11,16 @@ import { FaClockRotateLeft } from "react-icons/fa6";
 import { BiUserCheck } from "react-icons/bi";
 import { AiOutlinePlayCircle } from "react-icons/ai";
 import { PiMonitorPlayBold } from "react-icons/pi";
+import { FaFacebookF } from "react-icons/fa";
+import { AiOutlineTwitter } from "react-icons/ai";
+import { BiLogoLinkedin } from "react-icons/bi";
+import { FaYoutube } from "react-icons/fa";
 
 const Home = () => {
   const [currentIndex1, setCurrentIndex1] = useState(0);
   const [currentIndex2, setCurrentIndex2] = useState(0);
   const [currentIndex3, setCurrentIndex3] = useState(0);
+  const [currentIndex4, setCurrentIndex4] = useState(0);
   const streamToShow = 6;
   const featureToShow = 4;
 
@@ -50,6 +55,17 @@ const Home = () => {
   const newestNext = () => {
     if (currentIndex3 < Newest_dData.length - 1) {
       setCurrentIndex3((prevIndex) => prevIndex + 1);
+    }
+  };
+  const instPrevious = () => {
+    if (currentIndex4 > 0) {
+      setCurrentIndex4((prevIndex) => prevIndex - 1);
+    }
+  };
+
+  const instNext = () => {
+    if (currentIndex4 < StreamData - 1) {
+      setCurrentIndex4((prevIndex) => prevIndex + 1);
     }
   };
 
@@ -215,12 +231,68 @@ const Home = () => {
             <p>Explore a variety of fresh topics</p>
           </div>
         </div>
-        <div className="home_page_left_instructors">
+        <div className="home_page_left_featured_container">
           <div className="home_page_left_heading">
             <h4>Popular Instructors</h4>
             <button className="home_btn">See All</button>
           </div>
-          <div className="instructors_carousel"></div>
+          <div className="featured_carousel">
+            {StreamData.slice(currentIndex4, currentIndex4 + featureToShow).map(
+              (item) => {
+                return (
+                  <div className=" popular_instructor">
+                    <img src={item?.image} alt="instructor_img" />
+                    <h5>{item?.name}</h5>
+                    <p>{item?.description}</p>
+                    <div className="instructor_social">
+                      <button
+                        className="social_icons "
+                        style={{ color: "white", background: "#3B5998" }}
+                      >
+                        <FaFacebookF />
+                      </button>
+                      <button
+                        className="social_icons "
+                        style={{ color: "white", background: "#1DA1F2" }}
+                      >
+                        <AiOutlineTwitter />
+                      </button>
+                      <button
+                        className="social_icons "
+                        style={{ color: "white", background: "#8D6CAB" }}
+                      >
+                        <BiLogoLinkedin />
+                      </button>
+                      <button
+                        className="social_icons "
+                        style={{ color: "white", background: "#FF0000" }}
+                      >
+                        <FaYoutube />
+                      </button>
+                    </div>
+                    <div className="instructor_students">
+                      <span className="course_views">{`${item?.students} Students.`}</span>
+                      <span className="course_views">{`${item?.courses} Courses`}</span>
+                    </div>
+                  </div>
+                );
+              }
+            )}
+            <button
+              onClick={instPrevious}
+              className="carousel_btn previous_btn"
+              disabled={currentIndex4 === 0}
+            >
+              <GrFormPrevious />
+            </button>
+            <button
+              onClick={instNext}
+              className="carousel_btn next_btn"
+              disabled={currentIndex4 === StreamData - 1}
+            >
+              <GrFormNext />
+            </button>
+          </div>
         </div>
         <div className="home_page_left_"></div>
       </section>

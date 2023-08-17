@@ -230,3 +230,61 @@
     padding: 1rem;
     border-radius: 3px;
 }
+
+.popular_instructor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.5rem 3rem;
+    width: 100%;
+    background: white;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1),
+        /* Left shadow */
+        -2px 2px 4px rgba(0, 0, 0, 0.1),
+        /* Right shadow */
+        0 4px 4px rgba(0, 0, 0, 0.1);
+    /* Bottom shadow */
+    border-radius: 5px;
+    transition: 0.3s;
+
+    & h5 {
+        font-weight: 600;
+    }
+
+    &:hover {
+        transform: translateY(2px);
+    }
+
+    & p {
+        font-size: 13px;
+        color: #686f7a;
+        font-weight: 400;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
+
+.instructor_social {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.social_icons {
+    font-size: 1.15rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.instructor_students {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+}
