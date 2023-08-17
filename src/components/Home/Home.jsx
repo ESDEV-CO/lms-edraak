@@ -96,48 +96,46 @@ const Home = () => {
             <h4>Featured Courses</h4>
             <button className="home_btn">See All</button>
           </div>
-          <div className="home_page_left_featured_courses">
-            <div className="featured_carousel">
-              {FeaturedData.slice(
-                currentIndex2,
-                currentIndex2 + featureToShow
-              ).map((item) => {
-                return (
-                  <div className="featured_courses">
-                    <img src={item?.image} alt="featured_img" />
-                    <div className="featured_courses_views">
-                      <span className="course_views">{item?.views}</span>
-                      <span className="course_views">{item?.time}</span>
-                      <button className="course_share">
-                        <CiMenuKebab />
-                      </button>
-                    </div>
-                    <h5>{item?.course_name}</h5>
-                    <span className="course_views">{item?.description}</span>
-                    <div className="course_author">
-                      <span className="course_views">
-                        By <strong>{item?.instructor_name}</strong>
-                      </span>
-                      <span className="course_price">{item?.price}</span>
-                    </div>
+          <div className="featured_carousel">
+            {FeaturedData.slice(
+              currentIndex2,
+              currentIndex2 + featureToShow
+            ).map((item) => {
+              return (
+                <div className="featured_courses">
+                  <img src={item?.image} alt="featured_img" />
+                  <div className="featured_courses_views">
+                    <span className="course_views">{item?.views}</span>
+                    <span className="course_views">{item?.time}</span>
+                    <button className="course_share">
+                      <CiMenuKebab />
+                    </button>
                   </div>
-                );
-              })}
-              <button
-                onClick={featuredPrevious}
-                className="carousel_btn previous_btn"
-                disabled={currentIndex2 === 0}
-              >
-                <GrFormPrevious />
-              </button>
-              <button
-                onClick={featuredNext}
-                className="carousel_btn next_btn"
-                disabled={currentIndex2 === FeaturedData.length - 2}
-              >
-                <GrFormNext />
-              </button>
-            </div>
+                  <h5>{item?.course_name}</h5>
+                  <span className="course_views">{item?.description}</span>
+                  <div className="course_author">
+                    <span className="course_views">
+                      By <strong>{item?.instructor_name}</strong>
+                    </span>
+                    <span className="course_price">{item?.price}</span>
+                  </div>
+                </div>
+              );
+            })}
+            <button
+              onClick={featuredPrevious}
+              className="carousel_btn previous_btn"
+              disabled={currentIndex2 === 0}
+            >
+              <GrFormPrevious />
+            </button>
+            <button
+              onClick={featuredNext}
+              className="carousel_btn next_btn"
+              disabled={currentIndex2 === FeaturedData.length - 2}
+            >
+              <GrFormNext />
+            </button>
           </div>
         </div>
         <div className="home_page_left_featured_container">
@@ -145,51 +143,48 @@ const Home = () => {
             <h4>Newest Courses</h4>
             <button className="home_btn">See All</button>
           </div>
-          <div className="home_page_left_featured_courses">
-            <div className="featured_carousel">
-              {Newest_dData.slice(
-                currentIndex3,
-                currentIndex3 + featureToShow
-              ).map((item) => {
-                return (
-                  <div className="featured_courses">
-                    <img src={item?.image} alt="featured_img" />
-                    <div className="featured_courses_views">
-                      <span className="course_views">{item?.views}</span>
-                      <span className="course_views">{item?.time}</span>
-                      <button className="course_share">
-                        <CiMenuKebab />
-                      </button>
-                    </div>
-                    <h5>{item?.course_name}</h5>
-                    <span className="course_views">{item?.description}</span>
-                    <div className="course_author">
-                      <span className="course_views">
-                        By <strong>{item?.instructor_name}</strong>
-                      </span>
-                      <span className="course_price">{item?.price}</span>
-                    </div>
+          <div className="featured_carousel">
+            {Newest_dData.slice(
+              currentIndex3,
+              currentIndex3 + featureToShow
+            ).map((item) => {
+              return (
+                <div className="featured_courses">
+                  <img src={item?.image} alt="featured_img" />
+                  <div className="featured_courses_views">
+                    <span className="course_views">{item?.views}</span>
+                    <span className="course_views">{item?.time}</span>
+                    <button className="course_share">
+                      <CiMenuKebab />
+                    </button>
                   </div>
-                );
-              })}
-              <button
-                onClick={newestPrevious}
-                className="carousel_btn previous_btn"
-                disabled={currentIndex3 === 0}
-              >
-                <GrFormPrevious />
-              </button>
-              <button
-                onClick={newestNext}
-                className="carousel_btn next_btn"
-                disabled={currentIndex3 === Newest_dData.length - 2}
-              >
-                <GrFormNext />
-              </button>
-            </div>
+                  <h5>{item?.course_name}</h5>
+                  <span className="course_views">{item?.description}</span>
+                  <div className="course_author">
+                    <span className="course_views">
+                      By <strong>{item?.instructor_name}</strong>
+                    </span>
+                    <span className="course_price">{item?.price}</span>
+                  </div>
+                </div>
+              );
+            })}
+            <button
+              onClick={newestPrevious}
+              className="carousel_btn previous_btn"
+              disabled={currentIndex3 === 0}
+            >
+              <GrFormPrevious />
+            </button>
+            <button
+              onClick={newestNext}
+              className="carousel_btn next_btn"
+              disabled={currentIndex3 === Newest_dData.length - 2}
+            >
+              <GrFormNext />
+            </button>
           </div>
         </div>
-
         <div className="home_page_left_user_motivation">
           <div className="user_motivation">
             <span className="motivation_logo">
@@ -220,7 +215,13 @@ const Home = () => {
             <p>Explore a variety of fresh topics</p>
           </div>
         </div>
-        <div className="home_page_left_"></div>
+        <div className="home_page_left_instructors">
+          <div className="home_page_left_heading">
+            <h4>Popular Instructors</h4>
+            <button className="home_btn">See All</button>
+          </div>
+          <div className="instructors_carousel"></div>
+        </div>
         <div className="home_page_left_"></div>
       </section>
       <section className="home_page_right">
