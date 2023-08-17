@@ -1,7 +1,14 @@
 .home_page {
     padding: 1.5rem 2rem;
     display: flex;
+    flex-direction: column;
     gap: 1.5rem;
+}
+
+.home_page_top {
+    display: flex;
+    gap: 1.5rem;
+
 }
 
 .home_page_left {

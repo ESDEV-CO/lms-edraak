@@ -81,15 +81,18 @@ const Home = () => {
 
   return (
     <div className="home_page">
-      <section className="home_page_left">
-        <div className="home_page_left_live_stream_container">
-          <div className="home_page_left_heading">
-            <h4>Live Streams</h4>
-            <button className="home_btn">See All</button>
-          </div>
-          <div className="stream_carousel">
-            {StreamData.slice(currentIndex1, currentIndex1 + streamToShow).map(
-              (item) => {
+      <section className="home_page_top">
+        <section className="home_page_left">
+          <div className="home_page_left_live_stream_container">
+            <div className="home_page_left_heading">
+              <h4>Live Streams</h4>
+              <button className="home_btn">See All</button>
+            </div>
+            <div className="stream_carousel">
+              {StreamData.slice(
+                currentIndex1,
+                currentIndex1 + streamToShow
+              ).map((item) => {
                 return (
                   <div className="home_stream_info_wrapper">
                     <div className="home_stream_info">
@@ -99,156 +102,157 @@ const Home = () => {
                     </div>
                   </div>
                 );
-              }
-            )}
-            <button
-              onClick={streamPrevious}
-              className="carousel_btn previous_btn"
-              disabled={currentIndex1 === 0}
-            >
-              <GrFormPrevious />
-            </button>
-            <button
-              onClick={streamNext}
-              className="carousel_btn next_btn"
-              disabled={currentIndex1 === StreamData.length - 2}
-            >
-              <GrFormNext />
-            </button>
+              })}
+              <button
+                onClick={streamPrevious}
+                className="carousel_btn previous_btn"
+                disabled={currentIndex1 === 0}
+              >
+                <GrFormPrevious />
+              </button>
+              <button
+                onClick={streamNext}
+                className="carousel_btn next_btn"
+                disabled={currentIndex1 === StreamData.length - 2}
+              >
+                <GrFormNext />
+              </button>
+            </div>
           </div>
-        </div>
-        <div className="home_page_left_featured_container">
-          <div className="home_page_left_heading">
-            <h4>Featured Courses</h4>
-            <button className="home_btn">See All</button>
-          </div>
-          <div className="featured_carousel">
-            {FeaturedData.slice(
-              currentIndex2,
-              currentIndex2 + featureToShow
-            ).map((item) => {
-              return (
-                <div className="featured_courses">
-                  <img src={item?.image} alt="featured_img" />
-                  <div className="featured_courses_views">
-                    <span className="course_views">{item?.views}</span>
-                    <span className="course_views">{item?.time}</span>
-                    <button className="course_share">
-                      <CiMenuKebab />
-                    </button>
+          <div className="home_page_left_featured_container">
+            <div className="home_page_left_heading">
+              <h4>Featured Courses</h4>
+              <button className="home_btn">See All</button>
+            </div>
+            <div className="featured_carousel">
+              {FeaturedData.slice(
+                currentIndex2,
+                currentIndex2 + featureToShow
+              ).map((item) => {
+                return (
+                  <div className="featured_courses">
+                    <img src={item?.image} alt="featured_img" />
+                    <div className="featured_courses_views">
+                      <span className="course_views">{item?.views}</span>
+                      <span className="course_views">{item?.time}</span>
+                      <button className="course_share">
+                        <CiMenuKebab />
+                      </button>
+                    </div>
+                    <h5>{item?.course_name}</h5>
+                    <span className="course_views">{item?.description}</span>
+                    <div className="course_author">
+                      <span className="course_views">
+                        By <strong>{item?.instructor_name}</strong>
+                      </span>
+                      <span className="course_price">{item?.price}</span>
+                    </div>
                   </div>
-                  <h5>{item?.course_name}</h5>
-                  <span className="course_views">{item?.description}</span>
-                  <div className="course_author">
-                    <span className="course_views">
-                      By <strong>{item?.instructor_name}</strong>
-                    </span>
-                    <span className="course_price">{item?.price}</span>
+                );
+              })}
+              <button
+                onClick={featuredPrevious}
+                className="carousel_btn previous_btn"
+                disabled={currentIndex2 === 0}
+              >
+                <GrFormPrevious />
+              </button>
+              <button
+                onClick={featuredNext}
+                className="carousel_btn next_btn"
+                disabled={currentIndex2 === FeaturedData.length - 2}
+              >
+                <GrFormNext />
+              </button>
+            </div>
+          </div>
+          <div className="home_page_left_featured_container">
+            <div className="home_page_left_heading">
+              <h4>Newest Courses</h4>
+              <button className="home_btn">See All</button>
+            </div>
+            <div className="featured_carousel">
+              {Newest_dData.slice(
+                currentIndex3,
+                currentIndex3 + featureToShow
+              ).map((item) => {
+                return (
+                  <div className="featured_courses">
+                    <img src={item?.image} alt="featured_img" />
+                    <div className="featured_courses_views">
+                      <span className="course_views">{item?.views}</span>
+                      <span className="course_views">{item?.time}</span>
+                      <button className="course_share">
+                        <CiMenuKebab />
+                      </button>
+                    </div>
+                    <h5>{item?.course_name}</h5>
+                    <span className="course_views">{item?.description}</span>
+                    <div className="course_author">
+                      <span className="course_views">
+                        By <strong>{item?.instructor_name}</strong>
+                      </span>
+                      <span className="course_price">{item?.price}</span>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
-            <button
-              onClick={featuredPrevious}
-              className="carousel_btn previous_btn"
-              disabled={currentIndex2 === 0}
-            >
-              <GrFormPrevious />
-            </button>
-            <button
-              onClick={featuredNext}
-              className="carousel_btn next_btn"
-              disabled={currentIndex2 === FeaturedData.length - 2}
-            >
-              <GrFormNext />
-            </button>
+                );
+              })}
+              <button
+                onClick={newestPrevious}
+                className="carousel_btn previous_btn"
+                disabled={currentIndex3 === 0}
+              >
+                <GrFormPrevious />
+              </button>
+              <button
+                onClick={newestNext}
+                className="carousel_btn next_btn"
+                disabled={currentIndex3 === Newest_dData.length - 2}
+              >
+                <GrFormNext />
+              </button>
+            </div>
           </div>
-        </div>
-        <div className="home_page_left_featured_container">
-          <div className="home_page_left_heading">
-            <h4>Newest Courses</h4>
-            <button className="home_btn">See All</button>
+          <div className="home_page_left_user_motivation">
+            <div className="user_motivation">
+              <span className="motivation_logo">
+                <FaClockRotateLeft />
+              </span>
+              <h5>Go at your own pace</h5>
+              <p>Enjoy lifetime access to courses on Edututs+'s website</p>
+            </div>
+            <div className="user_motivation">
+              <span className="motivation_logo">
+                <BiUserCheck />
+              </span>
+              <h5>Learn from industry experts</h5>
+              <p>Select from top instructors around the world</p>
+            </div>
+            <div className="user_motivation">
+              <span className="motivation_logo">
+                <AiOutlinePlayCircle />
+              </span>
+              <h5>Find video courses on almost any topic</h5>
+              <p>Build your library for your career and personal growth</p>
+            </div>
+            <div className="user_motivation">
+              <span className="motivation_logo">
+                <PiMonitorPlayBold />
+              </span>
+              <h5>100,000 online courses</h5>
+              <p>Explore a variety of fresh topics</p>
+            </div>
           </div>
-          <div className="featured_carousel">
-            {Newest_dData.slice(
-              currentIndex3,
-              currentIndex3 + featureToShow
-            ).map((item) => {
-              return (
-                <div className="featured_courses">
-                  <img src={item?.image} alt="featured_img" />
-                  <div className="featured_courses_views">
-                    <span className="course_views">{item?.views}</span>
-                    <span className="course_views">{item?.time}</span>
-                    <button className="course_share">
-                      <CiMenuKebab />
-                    </button>
-                  </div>
-                  <h5>{item?.course_name}</h5>
-                  <span className="course_views">{item?.description}</span>
-                  <div className="course_author">
-                    <span className="course_views">
-                      By <strong>{item?.instructor_name}</strong>
-                    </span>
-                    <span className="course_price">{item?.price}</span>
-                  </div>
-                </div>
-              );
-            })}
-            <button
-              onClick={newestPrevious}
-              className="carousel_btn previous_btn"
-              disabled={currentIndex3 === 0}
-            >
-              <GrFormPrevious />
-            </button>
-            <button
-              onClick={newestNext}
-              className="carousel_btn next_btn"
-              disabled={currentIndex3 === Newest_dData.length - 2}
-            >
-              <GrFormNext />
-            </button>
-          </div>
-        </div>
-        <div className="home_page_left_user_motivation">
-          <div className="user_motivation">
-            <span className="motivation_logo">
-              <FaClockRotateLeft />
-            </span>
-            <h5>Go at your own pace</h5>
-            <p>Enjoy lifetime access to courses on Edututs+'s website</p>
-          </div>
-          <div className="user_motivation">
-            <span className="motivation_logo">
-              <BiUserCheck />
-            </span>
-            <h5>Learn from industry experts</h5>
-            <p>Select from top instructors around the world</p>
-          </div>
-          <div className="user_motivation">
-            <span className="motivation_logo">
-              <AiOutlinePlayCircle />
-            </span>
-            <h5>Find video courses on almost any topic</h5>
-            <p>Build your library for your career and personal growth</p>
-          </div>
-          <div className="user_motivation">
-            <span className="motivation_logo">
-              <PiMonitorPlayBold />
-            </span>
-            <h5>100,000 online courses</h5>
-            <p>Explore a variety of fresh topics</p>
-          </div>
-        </div>
-        <div className="home_page_left_featured_container">
-          <div className="home_page_left_heading">
-            <h4>Popular Instructors</h4>
-            <button className="home_btn">See All</button>
-          </div>
-          <div className="featured_carousel">
-            {StreamData.slice(currentIndex4, currentIndex4 + featureToShow).map(
-              (item) => {
+          <div className="home_page_left_featured_container">
+            <div className="home_page_left_heading">
+              <h4>Popular Instructors</h4>
+              <button className="home_btn">See All</button>
+            </div>
+            <div className="featured_carousel">
+              {StreamData.slice(
+                currentIndex4,
+                currentIndex4 + featureToShow
+              ).map((item) => {
                 return (
                   <div className=" popular_instructor">
                     <img src={item?.image} alt="instructor_img" />
@@ -291,127 +295,130 @@ const Home = () => {
                     </div>
                   </div>
                 );
-              }
-            )}
-            <button
-              onClick={instPrevious}
-              className="carousel_btn previous_btn"
-              disabled={currentIndex4 === 0}
-            >
-              <GrFormPrevious />
-            </button>
-            <button
-              onClick={instNext}
-              className="carousel_btn next_btn"
-              disabled={currentIndex4 === StreamData.length - 1}
-            >
-              <GrFormNext />
-            </button>
+              })}
+              <button
+                onClick={instPrevious}
+                className="carousel_btn previous_btn"
+                disabled={currentIndex4 === 0}
+              >
+                <GrFormPrevious />
+              </button>
+              <button
+                onClick={instNext}
+                className="carousel_btn next_btn"
+                disabled={currentIndex4 === StreamData.length - 1}
+              >
+                <GrFormNext />
+              </button>
+            </div>
           </div>
-        </div>
-      </section>
-      <section className="home_page_right">
-        <div className="home_page_right_instructor">
-          <div className=" popular_instructor right_instructor">
-            <img
-              src={require("../../assets/img-17.jpg")}
-              alt="instructor_img"
-            />
-            <span className="instructor_info">
-              <h5>Joginder Singh</h5>
-              <span>
-                <TbCircleCheck />
+        </section>
+        <section className="home_page_right">
+          <div className="home_page_right_instructor">
+            <div className=" popular_instructor right_instructor">
+              <img
+                src={require("../../assets/img-17.jpg")}
+                alt="instructor_img"
+              />
+              <span className="instructor_info">
+                <h5>Joginder Singh</h5>
+                <span>
+                  <TbCircleCheck />
+                </span>
               </span>
-            </span>
-            <p>Web Developer, Designer, and Teacher</p>
-            <div className="instructor_social">
-              <button
-                className="social_icons "
-                style={{ color: "white", background: "#3B5998" }}
-              >
-                <FaFacebookF />
-              </button>
-              <button
-                className="social_icons "
-                style={{ color: "white", background: "#1DA1F2" }}
-              >
-                <AiOutlineTwitter />
-              </button>
-              <button
-                className="social_icons "
-                style={{ color: "white", background: "#8D6CAB" }}
-              >
-                <BiLogoLinkedin />
-              </button>
-              <button
-                className="social_icons "
-                style={{ color: "white", background: "#FF0000" }}
-              >
-                <FaYoutube />
-              </button>
+              <p>Web Developer, Designer, and Teacher</p>
+              <div className="instructor_social">
+                <button
+                  className="social_icons "
+                  style={{ color: "white", background: "#3B5998" }}
+                >
+                  <FaFacebookF />
+                </button>
+                <button
+                  className="social_icons "
+                  style={{ color: "white", background: "#1DA1F2" }}
+                >
+                  <AiOutlineTwitter />
+                </button>
+                <button
+                  className="social_icons "
+                  style={{ color: "white", background: "#8D6CAB" }}
+                >
+                  <BiLogoLinkedin />
+                </button>
+                <button
+                  className="social_icons "
+                  style={{ color: "white", background: "#FF0000" }}
+                >
+                  <FaYoutube />
+                </button>
+              </div>
+              <div className="instructor_students">
+                <span className="course_views">615k Students</span>
+                <span className="course_views">12 Courses</span>
+              </div>
+              <button>Go To Profile</button>
             </div>
-            <div className="instructor_students">
-              <span className="course_views">615k Students</span>
-              <span className="course_views">12 Courses</span>
-            </div>
-            <button>Go To Profile</button>
           </div>
-        </div>
-        <div className="home_page_right_stream">
-          <span className="stream_heading">
-            <h5>Live Streaming</h5>
-          </span>
-          <span className="stream_logo">
-            <CiStreamOn />
-          </span>
-          <p>Set up your channel and stream live to your students</p>
-          <button className="primary_btn">Get Started</button>
-          <span className="stream_info">
-            Info : This feature only for 'Instructors'.
-          </span>
-        </div>
-        <div className="home_page_right_recommendation">
-          <h5>Get personalized recommendations</h5>
-          <p>Answer a few questions for your top picks</p>
-          <button className="primary_btn">Get Started</button>
-        </div>
-        <div className="home_page_right_stream">
-          <span className="stream_heading">
-            <h5>Top Categories</h5>
-          </span>
-          <span className="top_categories">
-            <PiBracketsAngleBold /> Development
-          </span>
-          <span className="top_categories">
-            <BiBarChartAlt2 /> Business
-          </span>
-          <span className="top_categories">
-            <BiDesktop /> IT & Software
-          </span>
-          <span className="top_categories">
-            <MdOutlineDesignServices /> Design
-          </span>
-          <span className="top_categories">
-            <BiLineChart /> Marketing
-          </span>
-          <span className="top_categories">
-            <PiBookOpenTextBold /> Personal Development
-          </span>
-          <span className="top_categories">
-            <AiOutlineCamera /> Photography
-          </span>
-          <span className="top_categories">
-            <FiMusic /> Music
-          </span>
-        </div>
-        <div className="home_page_right_stream">
-          <h4>Become an Instructor</h4>
-          <p>
-            Top instructors from around the world teach millions of students on
-            Cursus. We provide the tools and skills to teach what you love.
-          </p>
-          <button className="primary_btn">Start Teaching</button>
-        </div>
+          <div className="home_page_right_stream">
+            <span className="stream_heading">
+              <h5>Live Streaming</h5>
+            </span>
+            <span className="stream_logo">
+              <CiStreamOn />
+            </span>
+            <p>Set up your channel and stream live to your students</p>
+            <button className="primary_btn">Get Started</button>
+            <span className="stream_info">
+              Info : This feature only for 'Instructors'.
+            </span>
+          </div>
+          <div className="home_page_right_recommendation">
+            <h5>Get personalized recommendations</h5>
+            <p>Answer a few questions for your top picks</p>
+            <button className="primary_btn">Get Started</button>
+          </div>
+          <div className="home_page_right_stream">
+            <span className="stream_heading">
+              <h5>Top Categories</h5>
+            </span>
+            <span className="top_categories">
+              <PiBracketsAngleBold /> Development
+            </span>
+            <span className="top_categories">
+              <BiBarChartAlt2 /> Business
+            </span>
+            <span className="top_categories">
+              <BiDesktop /> IT & Software
+            </span>
+            <span className="top_categories">
+              <MdOutlineDesignServices /> Design
+            </span>
+            <span className="top_categories">
+              <BiLineChart /> Marketing
+            </span>
+            <span className="top_categories">
+              <PiBookOpenTextBold /> Personal Development
+            </span>
+            <span className="top_categories">
+              <AiOutlineCamera /> Photography
+            </span>
+            <span className="top_categories">
+              <FiMusic /> Music
+            </span>
+          </div>
+          <div className="home_page_right_stream">
+            <h4>Become an Instructor</h4>
+            <p>
+              Top instructors from around the world teach millions of students
+              on Cursus. We provide the tools and skills to teach what you love.
+            </p>
+            <button className="primary_btn">Start Teaching</button>
+          </div>
+        </section>
+      </section>
+      <section className="home_page_bottom">
+        <h5>What Our Student Have Today</h5>
       </section>
     </div>
   );
