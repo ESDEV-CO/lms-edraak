@@ -61,7 +61,7 @@ export const StreamData = [
   },
   {
     id: 10,
-    name: "Quinton Bachelor",
+    name: "Quin Bachelor",
     description: "Head of Data Science, Pierian Data Inc",
 
     image: require("../../assets/img-10.jpg"),
