@@ -127,4 +127,12 @@ export const StreamData = [
     courses: "15",
     image: require("../../assets/img-16.jpg"),
   },
+  {
+    id: 17,
+    name: "Joginder Singh",
+    description: "Web Developer ,Designer and Teacher",
+    students: "615k",
+    courses: "12",
+    image: require("../../assets/img-17.jpg"),
+  },
 ];

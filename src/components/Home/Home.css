@@ -13,6 +13,7 @@
 
 .home_page_right {
     width: 30%;
+    padding-right: 1rem;
 }
 
 .home_btn {
@@ -265,6 +266,27 @@
         white-space: nowrap;
         overflow: hidden;
     }
+
+    & button {
+        font-size: 14px;
+        font-weight: 600;
+        color: #333;
+        transition: 0.3s;
+
+        &:hover {
+            color: var(--pri_bg);
+        }
+    }
+}
+
+.instructor_info {
+    display: flex;
+    gap: 0.35rem;
+
+    & span {
+        color: #1DA1F2;
+        font-size: 1rem;
+    }
 }
 
 .instructor_social {
@@ -287,4 +309,8 @@
     align-items: center;
     gap: 0.5rem;
 
+}
+
+.right_instructor:hover {
+    transform: none;
 }

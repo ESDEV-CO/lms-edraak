@@ -15,6 +15,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { BiLogoLinkedin } from "react-icons/bi";
 import { FaYoutube } from "react-icons/fa";
+import { TbCircleCheck } from "react-icons/tb";
 
 const Home = () => {
   const [currentIndex1, setCurrentIndex1] = useState(0);
@@ -64,7 +65,7 @@ const Home = () => {
   };
 
   const instNext = () => {
-    if (currentIndex4 < StreamData - 1) {
+    if (currentIndex4 < StreamData.length - 1) {
       setCurrentIndex4((prevIndex) => prevIndex + 1);
     }
   };
@@ -242,7 +243,12 @@ const Home = () => {
                 return (
                   <div className=" popular_instructor">
                     <img src={item?.image} alt="instructor_img" />
-                    <h5>{item?.name}</h5>
+                    <span className="instructor_info">
+                      <h5>{item?.name}</h5>
+                      <span>
+                        <TbCircleCheck />
+                      </span>
+                    </span>
                     <p>{item?.description}</p>
                     <div className="instructor_social">
                       <button
@@ -288,16 +294,60 @@ const Home = () => {
             <button
               onClick={instNext}
               className="carousel_btn next_btn"
-              disabled={currentIndex4 === StreamData - 1}
+              disabled={currentIndex4 === StreamData.length - 1}
             >
               <GrFormNext />
             </button>
           </div>
         </div>
-        <div className="home_page_left_"></div>
       </section>
       <section className="home_page_right">
-        <div className="home_page_right_"></div>
+        <div className="home_page_right_instructor">
+          <div className=" popular_instructor right_instructor">
+            <img
+              src={require("../../assets/img-17.jpg")}
+              alt="instructor_img"
+            />
+            <span className="instructor_info">
+              <h5>Joginder Singh</h5>
+              <span>
+                <TbCircleCheck />
+              </span>
+            </span>
+            <p>Web Developer, Designer, and Teacher</p>
+            <div className="instructor_social">
+              <button
+                className="social_icons "
+                style={{ color: "white", background: "#3B5998" }}
+              >
+                <FaFacebookF />
+              </button>
+              <button
+                className="social_icons "
+                style={{ color: "white", background: "#1DA1F2" }}
+              >
+                <AiOutlineTwitter />
+              </button>
+              <button
+                className="social_icons "
+                style={{ color: "white", background: "#8D6CAB" }}
+              >
+                <BiLogoLinkedin />
+              </button>
+              <button
+                className="social_icons "
+                style={{ color: "white", background: "#FF0000" }}
+              >
+                <FaYoutube />
+              </button>
+            </div>
+            <div className="instructor_students">
+              <span className="course_views">615k Students</span>
+              <span className="course_views">12 Courses</span>
+            </div>
+            <button>Go To Profile</button>
+          </div>
+        </div>
         <div className="home_page_right_"></div>
         <div className="home_page_right_"></div>
         <div className="home_page_right_"></div>
