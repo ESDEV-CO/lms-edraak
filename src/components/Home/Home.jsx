@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Home.css";
 import { StreamData } from "../Stream/StreamData";
+import { FeaturedData } from "./FeaturedData";
 import { GrFormNext } from "react-icons/gr";
 import { GrFormPrevious } from "react-icons/gr";
 import { CiMenuKebab } from "react-icons/ci";
@@ -10,17 +11,32 @@ import { AiOutlinePlayCircle } from "react-icons/ai";
 import { PiMonitorPlayBold } from "react-icons/pi";
 
 const Home = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsToShow = 6;
+  const [currentIndex1, setCurrentIndex1] = useState(0);
+  const [currentIndex2, setCurrentIndex2] = useState(0);
+  const streamToShow = 6;
+  const featureToShow = 4;
 
-  const handlePrevious = () => {
-    setCurrentIndex((prevIndex) => Math.max(prevIndex - itemsToShow, 0));
+  const streamPrevious = () => {
+    if (currentIndex1 > 0) {
+      setCurrentIndex1((prevIndex) => prevIndex - 1);
+    }
   };
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      Math.min(prevIndex + itemsToShow, StreamData.length - itemsToShow)
-    );
+  const streamNext = () => {
+    if (currentIndex1 < StreamData.length - 1) {
+      setCurrentIndex1((prevIndex) => prevIndex + 1);
+    }
+  };
+  const featuredPrevious = () => {
+    if (currentIndex2 > 0) {
+      setCurrentIndex2((prevIndex) => prevIndex - 1);
+    }
+  };
+
+  const featuredNext = () => {
+    if (currentIndex2 < StreamData.length - 1) {
+      setCurrentIndex2((prevIndex) => prevIndex + 1);
+    }
   };
 
   return (
@@ -32,7 +48,7 @@ const Home = () => {
             <button className="home_btn">See All</button>
           </div>
           <div className="stream_carousel">
-            {StreamData.slice(currentIndex, currentIndex + itemsToShow).map(
+            {StreamData.slice(currentIndex1, currentIndex1 + streamToShow).map(
               (item) => {
                 return (
                   <div className="home_stream_info_wrapper">
@@ -46,16 +62,16 @@ const Home = () => {
               }
             )}
             <button
-              onClick={handlePrevious}
+              onClick={streamPrevious}
               className="carousel_btn previous_btn"
-              disabled={currentIndex === 0}
+              disabled={currentIndex1 === 0}
             >
               <GrFormPrevious />
             </button>
             <button
-              onClick={handleNext}
+              onClick={streamNext}
               className="carousel_btn next_btn"
-              disabled={currentIndex + itemsToShow >= StreamData.length}
+              disabled={currentIndex1 === StreamData.length - 2}
             >
               <GrFormNext />
             </button>
@@ -67,56 +83,47 @@ const Home = () => {
             <button className="home_btn">See All</button>
           </div>
           <div className="home_page_left_featured_courses">
-            <div className="featured_courses">
-              <img
-                src={require("../../assets/featured3.jpg")}
-                alt="featured1"
-              />
-              <div className="featured_courses_views">
-                <span className="course_views">109k Views.</span>
-                <span className="course_views">10 days ago</span>
-                <button className="course_share">
-                  <CiMenuKebab />
-                </button>
-              </div>
-              <h5>
-                Complete Python Bootcamp: Go from zero to hero in Python 3
-              </h5>
-              <span className="course_views">Web Development | Python</span>
-              <div className="course_author">
-                <span className="course_views">
-                  By <strong>John Doe</strong>
-                </span>
-                <span className="course_price">$5</span>
-              </div>
+            <div className="featured_carousel">
+              {FeaturedData.slice(
+                currentIndex2,
+                currentIndex2 + featureToShow
+              ).map((item) => {
+                return (
+                  <div className="featured_courses">
+                    <img src={item?.image} alt="featured_img" />
+                    <div className="featured_courses_views">
+                      <span className="course_views">{item?.views}</span>
+                      <span className="course_views">{item?.time}</span>
+                      <button className="course_share">
+                        <CiMenuKebab />
+                      </button>
+                    </div>
+                    <h5>{item?.course_name}</h5>
+                    <span className="course_views">{item?.description}</span>
+                    <div className="course_author">
+                      <span className="course_views">
+                        By <strong>{item?.instructor_name}</strong>
+                      </span>
+                      <span className="course_price">{item?.price}</span>
+                    </div>
+                  </div>
+                );
+              })}
+              <button
+                onClick={featuredPrevious}
+                className="carousel_btn previous_btn"
+                disabled={currentIndex2 === 0}
+              >
+                <GrFormPrevious />
+              </button>
+              <button
+                onClick={featuredNext}
+                className="carousel_btn next_btn"
+                disabled={currentIndex2 === FeaturedData.length - 2}
+              >
+                <GrFormNext />
+              </button>
             </div>
-            <div className="featured_courses">
-              <img
-                src={require("../../assets/featured2.jpg")}
-                alt="featured2"
-              />
-              <div className="featured_courses_views">
-                <span className="course_views">5M Views.</span>
-                <span className="course_views">15 days ago</span>
-                <button className="course_share">
-                  <CiMenuKebab />
-                </button>
-              </div>
-              <h5>The Complete JavaScript Course 2020: Build Real Projects!</h5>
-              <span className="course_views">Development | JavaScript</span>
-              <div className="course_author">
-                <span className="course_views">
-                  By <strong>Jessica William</strong>
-                </span>
-                <span className="course_price">$10</span>
-              </div>
-            </div>
-            <button className="carousel_btn previous_btn">
-              <GrFormPrevious />
-            </button>
-            <button className="carousel_btn next_btn">
-              <GrFormNext />
-            </button>
           </div>
         </div>
         <div className="home_page_left_featured_container">
