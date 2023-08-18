@@ -29,18 +29,18 @@ const SideBar = () => {
           </span>
           <h5>Home</h5>
         </Link>
-        <button className="sidebar_categories_span">
+        <Link to={"/stream"} className="sidebar_categories_span">
           <span className="sidebar_logo">
             <CiStreamOn />
           </span>
           <h5>Stream</h5>
-        </button>
-        <button className="sidebar_categories_span">
+        </Link>
+        <Link to={"/explore"} className="sidebar_categories_span">
           <span className="sidebar_logo">
             <BsSearch />
           </span>
           <h5>Explore</h5>
-        </button>
+        </Link>
         <button
           onClick={() => setIsCategories(!isCategories)}
           className="sidebar_categories_span"
@@ -112,26 +112,38 @@ const SideBar = () => {
         </button>
         {isPages && (
           <div className="Categories_hidden_div">
-            <h6 className="hidden_div_heading">About</h6>
-            <h6 className="hidden_div_heading">Sign In</h6>
-            <h6 className="hidden_div_heading">Sign Up</h6>
-            <h6 className="hidden_div_heading">Sign up Steps</h6>
-            <h6 className="hidden_div_heading">Paid Membership</h6>
-            <h6 className="hidden_div_heading">Course Detail View</h6>
-            <h6 className="hidden_div_heading">Chekout</h6>
-            <h6 className="hidden_div_heading">Invoice</h6>
+            <Link to={"/about"} className="hidden_div_heading">
+              About
+            </Link>
+            <Link to={"/signin"} className="hidden_div_heading">
+              Sign In
+            </Link>
+            <Link to={"/signup"} className="hidden_div_heading">
+              Sign Up
+            </Link>
+            {/* <h6 className="hidden_div_heading">Sign up Steps</h6>
+            <h6 className="hidden_div_heading">Paid Membership</h6> */}
+            <Link to={"/course-detail"} className="hidden_div_heading">
+              Course Detail View
+            </Link>
+            <Link to={"/checkout"} className="hidden_div_heading">
+              Chekout
+            </Link>
+            {/* <h6 className="hidden_div_heading">Invoice</h6>
             <h6 className="hidden_div_heading">Career</h6>
             <h6 className="hidden_div_heading">Job Apply</h6>
             <h6 className="hidden_div_heading">Our Blog</h6>
             <h6 className="hidden_div_heading">Blog details View</h6>
             <h6 className="hidden_div_heading">Company Details</h6>
-            <h6 className="hidden_div_heading">Press</h6>
-            <h6 className="hidden_div_heading">Live Stream view</h6>
-            <h6 className="hidden_div_heading">Add Live Stream</h6>
+            <h6 className="hidden_div_heading">Press</h6> */}
+            {/* <Link to={"/stream"} className="hidden_div_heading">
+              Live Stream view
+            </Link> */}
+            {/* <h6 className="hidden_div_heading">Add Live Stream</h6>
             <h6 className="hidden_div_heading">Search Result</h6>
             <h6 className="hidden_div_heading">Thank You</h6>
             <h6 className="hidden_div_heading">Coming Soon</h6>
-            <h6 className="hidden_div_heading">Error 404</h6>
+            <h6 className="hidden_div_heading">Error 404</h6> */}
           </div>
         )}
       </div>
