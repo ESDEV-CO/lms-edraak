@@ -9,6 +9,12 @@ import { AiOutlineInstagram } from "react-icons/ai";
 import { FaPinterestP } from "react-icons/fa";
 
 const Footer = () => {
+  const languageOptions = [
+    { code: "select", name: "Language" },
+    { code: "en", name: "English" },
+    { code: "es", name: "Español" },
+    { code: "fr", name: "Français" },
+  ];
   return (
     <div className="footer">
       <div className="footer_wrapper">
@@ -32,7 +38,16 @@ const Footer = () => {
             <li>Sitemap</li>
           </ul>
         </div>
-        <button className="primary_btn dark_hover">Teach on LMS</button>
+        <div className="footer_btn">
+          <button className="primary_btn dark_hover">Teach on LMS</button>
+          <select className="language_select">
+            {languageOptions.map((language) => (
+              <option key={language.code} value={language.code}>
+                {language.name}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
       <div className="footer_rights">
         <div className="footer_rights_left">
