@@ -7,6 +7,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { AiOutlineMail } from "react-icons/ai";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import SideBar from "../Sidebar/SideBar";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -41,9 +42,9 @@ const Navbar = () => {
         </div>
         <div className="navbar_user_info">
           <button className="primary_btn user_btn">Create New Course</button>
-          <button className="user_info_notification">
+          <Link to={"/checkout"} className="user_info_notification">
             <AiOutlineShoppingCart />
-          </button>
+          </Link>
           <button
             onClick={() => setIsMessage(!isMessage)}
             className="user_info_notification"

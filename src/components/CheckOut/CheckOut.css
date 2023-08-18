@@ -1,0 +1,46 @@
+.checkout_nav {
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkout_nav_btn {
+    background: white;
+    border: 1px solid #efefef;
+    color: #333;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    transition: 0.3s;
+
+    &:hover {
+        color: white;
+    }
+}
+
+.checkout_heading {
+    padding: 1rem 2rem;
+    background: white;
+    margin-top: 0.35rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.checkout_heading_nav {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+
+    & h6 {
+        font-weight: 400;
+        color: var(--pri_clr);
+    }
+
+    & span {
+        color: #6c757d;
+        font-size: 0.875rem;
+        font-weight: 400;
+    }
+}
