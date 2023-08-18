@@ -362,10 +362,11 @@
         color: white;
         max-width: 70%;
     }
+}
 
-    & button:hover {
-        background: #C72127;
-    }
+.dark_hover:hover {
+    background: #C72127;
+
 }
 
 

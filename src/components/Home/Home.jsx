@@ -376,7 +376,7 @@ const Home = () => {
           <div className="home_page_right_recommendation">
             <h5>Get personalized recommendations</h5>
             <p>Answer a few questions for your top picks</p>
-            <button className="primary_btn">Get Started</button>
+            <button className="primary_btn dark_hover">Get Started</button>
           </div>
           <div className="home_page_right_stream box_shadow">
             <span className="stream_heading ">
