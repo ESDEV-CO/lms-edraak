@@ -26,13 +26,24 @@
     gap: 1rem;
     padding: 2rem;
     z-index: 35;
-    width: 40%;
+    width: 100%;
 
 
     & p {
-        font-size: 0.875rem;
         font-weight: 400;
         color: #686f7a;
+    }
+}
+
+@media (min-width:768px) {
+    .sigin_container {
+        width: 70%;
+    }
+}
+
+@media (min-width:1024px) {
+    .sigin_container {
+        width: 50%;
     }
 }
 

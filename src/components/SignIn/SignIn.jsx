@@ -5,6 +5,7 @@ import { AiOutlineTwitter } from "react-icons/ai";
 import { BsGoogle } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
 import { RiLockPasswordLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const SignIn = () => {
   return (
@@ -13,10 +14,12 @@ const SignIn = () => {
         <div className="logo_img">
           <img src={require("../../assets/logo.png")} alt="logo" />
         </div>
-        <span className="logo_name">LMS</span>
+        <Link to={"/"} className="logo_name">
+          LMS
+        </Link>
       </div>
       <div className="sigin_container box_shadow">
-        <h3>Welcome Back</h3>
+        <h4>Welcome Back</h4>
         <p>Log In to Your Edututs+ Account!</p>
 
         <button

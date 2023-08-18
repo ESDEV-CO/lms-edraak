@@ -161,6 +161,7 @@
         background: var(--pri_clr);
         color: white;
         padding: 0.65rem;
+        cursor: pointer;
     }
 
     .footer_rights {
