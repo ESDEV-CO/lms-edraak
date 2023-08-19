@@ -177,7 +177,7 @@ const Home = () => {
                 currentIndex3 + featureToShow
               ).map((item) => {
                 return (
-                  <div className="featured_courses">
+                  <div className="featured_courses box_shadow">
                     <img src={item?.image} alt="featured_img" />
                     <div className="featured_courses_views">
                       <h6 className="course_views">{`${item?.views} Views`}</h6>
