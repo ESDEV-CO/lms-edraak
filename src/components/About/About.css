@@ -95,7 +95,7 @@
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
-    padding: 2rem 1rem;
+    padding: 3rem;
     background: white;
 }
 
@@ -112,11 +112,17 @@
     width: 50%;
 }
 
-/* .story_img {
+.story_img {
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-} */
+
+    & img {
+        width: 100%;
+    }
+}
+
 .about_global {
     display: flex;
     flex-direction: column;
@@ -147,4 +153,24 @@
     flex-direction: column;
     width: 20%;
 
+}
+
+.about_team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    background: white;
+    width: 100%;
+    gap: 1rem;
+
+}
+
+.team_info {
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.team_btn {
+    width: 30%;
 }

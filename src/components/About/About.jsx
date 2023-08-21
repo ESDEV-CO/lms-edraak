@@ -101,7 +101,7 @@ const About = () => {
             </p>
           </div>
           <div className="story_img">
-            <img src={require("../../assets/stroy_img.png")} alt="" />
+            <img src={require("../../assets/stroy_img.png")} alt="story_img" />
           </div>
         </section>
         <section className="about_global">
@@ -135,6 +135,36 @@ const About = () => {
             <div className="global_reach">
               <h1>295</h1>
               <p>Countries</p>
+            </div>
+          </div>
+        </section>
+        <section className="about_team">
+          <h3>Meet Our Team</h3>
+          <p className="global_p">
+            A perfect blend of creativity and technical wizardry. The best
+            people formula for great websites!
+          </p>
+          <span className="underline"></span>
+          <div className="about_story team_info">
+            <div className="story_info ">
+              <p>
+                Morbi eget elit eget turpis varius mollis eget vel massa. Donec
+                porttitor, sapien eget commodo vulputate, erat felis aliquam
+                dolor, non condimentum libero dolor vel ipsum. Sed porttitor
+                nisi eget nulla ullamcorper eleifend. Fusce tristique sapien
+                nisi, vel feugiat neque luctus sit amet. Quisque consequat quis
+                turpis in mattis. Maecenas eget mollis nisl. Cras porta dapibus
+                est, quis malesuada ex iaculis at. Vestibulum egestas tortor in
+                urna tempor, in fermentum lectus bibendum. In leo leo, bibendum
+                at pharetra at, tincidunt in nulla. In vel malesuada nulla, sed
+                tincidunt neque. Phasellus at massa vel sem aliquet sodales non
+                in magna. Ut tempus ipsum sagittis neque cursus euismod. Vivamus
+                luctus elementum tortor, ac aliquet dolor vehicula et.
+              </p>
+              <button className="primary_btn team_btn">Join Our Team</button>
+            </div>
+            <div className="story_img">
+              <img src={require("../../assets/team.jpg")} alt="team" />
             </div>
           </div>
         </section>
