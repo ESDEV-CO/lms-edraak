@@ -45,7 +45,7 @@ const About = () => {
               <span className="card_logo">
                 <CiMobile3 />
               </span>
-              <h4>Mobile Learning</h4>
+              <h6>Mobile Learning</h6>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Quibusdam dolor veniam pariatur
@@ -55,7 +55,7 @@ const About = () => {
               <span className="card_logo">
                 <GoPeople />
               </span>
-              <h4>Academic & Technical Support</h4>
+              <h6>Academic & Technical Support</h6>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Quibusdam dolor veniam pariatur
@@ -65,7 +65,7 @@ const About = () => {
               <span className="card_logo">
                 <LiaCertificateSolid />
               </span>
-              <h4>Shareable Certificate</h4>
+              <h6>Shareable Certificate</h6>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Quibusdam dolor veniam pariatur
@@ -75,7 +75,7 @@ const About = () => {
               <span className="card_logo">
                 <TfiWorld />
               </span>
-              <h4>An Inclusive Experience</h4>
+              <h6>An Inclusive Experience</h6>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Quibusdam dolor veniam pariatur
