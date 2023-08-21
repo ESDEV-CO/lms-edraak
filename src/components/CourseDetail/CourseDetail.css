@@ -97,6 +97,7 @@
     gap: 1rem;
     width: 100%;
     padding: 1rem 3rem 0.5rem 3rem;
+    background: white;
 }
 
 .instructor_wrapper {
@@ -146,4 +147,45 @@
     & :first-child {
         border-bottom: 2px solid var(--pri_bg);
     }
+}
+
+.course_requirements {
+    padding: 2rem;
+    background: var(--bg_clr);
+    color: var(--pri_clr);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.requirements {
+    padding-left: 1rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #686f7a;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    & li {
+        position: relative;
+        padding-left: 1rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: var(--pri_clr);
+        }
+    }
+}
+
+.bold_list {
+    font-weight: 600;
 }
