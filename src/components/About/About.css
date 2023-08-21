@@ -1,0 +1,150 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.about_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+    position: relative;
+    width: 100%;
+    background: white;
+
+}
+
+.about_header::before {
+    content: "";
+    background: url(../../assets/title_bg.jpg) center repeat-x;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    pointer-events: none;
+    background-size: contain;
+    opacity: 0.2;
+}
+
+.about_nav {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    color: var(--pri_clr);
+    cursor: pointer;
+
+    & :first-child {
+        border-bottom: 2px solid var(--pri_bg);
+    }
+}
+
+.about_features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 0;
+    width: 95%;
+}
+
+.underline {
+    width: 5%;
+    border-bottom: 3px solid var(--pri_bg);
+
+}
+
+.about_feature_card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.feature_card_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    width: 23%;
+
+    & p {
+        text-align: center;
+    }
+}
+
+.card_logo {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about_story {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 2rem 1rem;
+    background: white;
+}
+
+.story_underline {
+    width: 10%;
+    border-bottom: 3px solid var(--pri_bg);
+}
+
+.story_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+    width: 50%;
+}
+
+/* .story_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+.about_global {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    background: var(--bg_clr);
+    width: 100%;
+    gap: 1rem;
+
+}
+
+.global_p {
+    max-width: 45%;
+    text-align: center;
+}
+
+.global_reach_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 95%;
+    justify-content: space-evenly;
+}
+
+.global_reach {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 20%;
+
+}
