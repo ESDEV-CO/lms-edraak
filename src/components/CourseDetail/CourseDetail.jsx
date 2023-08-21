@@ -61,7 +61,7 @@ const CourseDetail = () => {
               <img src={require("../../assets/img-1.jpg")} alt="img1" />
             </span>
             <span className="instructor_info">
-              <h6>Johnson Smith</h6>
+              <h5>Johnson Smith</h5>
               <button className="primary_btn">Subscribe</button>
             </span>
           </div>
@@ -86,7 +86,8 @@ const CourseDetail = () => {
         </div>
         <ul className="course_list">
           <li>About</li>
-          <li>Course Content</li>
+          <li>Course </li>
+          <li>Content</li>
           <li>Reviews</li>
         </ul>
       </section>
