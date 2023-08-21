@@ -7,6 +7,7 @@ import CheckOutScreen from "../Screens/CheckOutScreen";
 import ExploreScreen from "../Screens/ExploreScreen";
 import CourseDetailScreen from "../Screens/CourseDetailScreen";
 import StreamScreen from "../Screens/StreamScreen";
+import AboutScreen from "../Screens/AboutScreen";
 
 function AppRoutes() {
   return (
@@ -19,6 +20,7 @@ function AppRoutes() {
         <Route path="/explore" element={<ExploreScreen />} />
         <Route path="/course-detail" element={<CourseDetailScreen />} />
         <Route path="/stream" element={<StreamScreen />} />
+        <Route path="/about" element={<AboutScreen />} />
       </Routes>
     </>
   );
