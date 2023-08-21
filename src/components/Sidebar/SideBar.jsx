@@ -23,19 +23,25 @@ const SideBar = () => {
   return (
     <div className="sidebar">
       <div className="sidebar_categories">
-        <Link to={"/"} className="sidebar_categories_span">
+        <Link to={"/"} className="sidebar_categories_span sidebar_heading">
           <span className="sidebar_logo">
             <BiHomeAlt />
           </span>
           <h5>Home</h5>
         </Link>
-        <Link to={"/stream"} className="sidebar_categories_span">
+        <Link
+          to={"/stream"}
+          className="sidebar_categories_span sidebar_heading"
+        >
           <span className="sidebar_logo">
             <CiStreamOn />
           </span>
           <h5>Stream</h5>
         </Link>
-        <Link to={"/explore"} className="sidebar_categories_span">
+        <Link
+          to={"/explore"}
+          className="sidebar_categories_span sidebar_heading"
+        >
           <span className="sidebar_logo">
             <BsSearch />
           </span>
@@ -43,7 +49,7 @@ const SideBar = () => {
         </Link>
         <button
           onClick={() => setIsCategories(!isCategories)}
-          className="sidebar_categories_span"
+          className="sidebar_categories_span sidebar_heading"
         >
           <span className="sidebar_logo">
             <BiCategory />
@@ -73,7 +79,7 @@ const SideBar = () => {
         )}
         <button
           onClick={() => setISTests(!isTests)}
-          className="sidebar_categories_span"
+          className="sidebar_categories_span sidebar_heading"
         >
           <span className="sidebar_logo">
             <BsClipboard2Check />
@@ -92,7 +98,7 @@ const SideBar = () => {
             <h6 className="hidden_div_heading">My Certification</h6>
           </div>
         )}
-        <button className="sidebar_categories_span">
+        <button className="sidebar_categories_span sidebar_heading">
           <span className="sidebar_logo">
             <AiOutlineHeart />
           </span>
@@ -100,7 +106,7 @@ const SideBar = () => {
         </button>
         <button
           onClick={() => setIsPages(!isPages)}
-          className="sidebar_categories_span"
+          className="sidebar_categories_span sidebar_heading"
         >
           <span className="sidebar_logo">
             <MdOutlineFindInPage />
@@ -149,7 +155,7 @@ const SideBar = () => {
       </div>
       <div className="sidebar_subscription">
         <h6>subscriptions</h6>
-        <button className="sidebar_categories_span">
+        <button className="sidebar_categories_span sidebar_heading">
           <span className="sidebar_logo">
             <img src={require("../../assets/img-1.jpg")} alt="img1" />
           </span>
@@ -158,7 +164,7 @@ const SideBar = () => {
             <GoDotFill />
           </span>
         </button>
-        <button className="sidebar_categories_span">
+        <button className="sidebar_categories_span sidebar_heading">
           <span className="sidebar_logo">
             <img src={require("../../assets/img-2.jpg")} alt="img2" />
           </span>
@@ -167,7 +173,7 @@ const SideBar = () => {
             <GoDotFill />
           </span>
         </button>
-        <button className="sidebar_categories_span">
+        <button className="sidebar_categories_span sidebar_heading">
           <span className="sidebar_logo">
             <AiOutlinePlusCircle />
           </span>
@@ -175,25 +181,25 @@ const SideBar = () => {
         </button>
       </div>
       <div className="sidebar_setting">
-        <button className="sidebar_categories_span">
+        <button className="sidebar_categories_span sidebar_heading">
           <span className="sidebar_logo">
             <FiSettings />
           </span>
           <h5>Settings</h5>
         </button>
-        <button className="sidebar_categories_span">
+        <button className="sidebar_categories_span sidebar_heading">
           <span className="sidebar_logo">
             <BiHelpCircle />
           </span>
           <h5>Help</h5>
         </button>
-        <button className="sidebar_categories_span">
+        <button className="sidebar_categories_span sidebar_heading">
           <span className="sidebar_logo">
             <MdReportGmailerrorred />
           </span>
           <h5>Report History</h5>
         </button>
-        <button className="sidebar_categories_span">
+        <button className="sidebar_categories_span sidebar_heading">
           <span className="sidebar_logo">
             <TbMessageReport />
           </span>
