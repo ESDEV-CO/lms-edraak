@@ -1,5 +1,4 @@
 import React from "react";
-import "./SignUp.css";
 import { Link } from "react-router-dom";
 
 const SignUp = () => {
@@ -39,7 +38,10 @@ const SignUp = () => {
           <h6>Terms of Use</h6> <p>and</p> <h6>Privacy Policy.</h6>
         </div>
         <div className="signin_signup forgot_password">
-          <p>Already have a account?</p> <h6>Log In.</h6>
+          <p>Already have a account?</p>{" "}
+          <Link className="signin_options" to={"/signin"}>
+            Log In.
+          </Link>
         </div>
       </div>
       <div className="signin_rights">

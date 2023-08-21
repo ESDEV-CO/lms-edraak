@@ -107,6 +107,33 @@ input::placeholder {
             text-decoration: underline;
         }
     }
+
+
+}
+
+.signin_options {
+    color: var(--pri_bg);
+    cursor: pointer;
+    font-size: 0.65rem;
+    font-weight: 400;
+    transition: 0.3s;
+
+    &:hover {
+        color: var(--pri_clr);
+        text-decoration: underline;
+    }
+}
+
+@media (min-width:640px) {
+    .signin_options {
+        font-size: 0.85rem;
+    }
+}
+
+@media (min-width:1024px) {
+    .signin_options {
+        font-size: 0.95rem;
+    }
 }
 
 .signin_signup {

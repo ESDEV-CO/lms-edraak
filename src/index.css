@@ -36,7 +36,8 @@ li {
   list-style: none;
 }
 
-a {
+a,
+Link {
   text-decoration: none;
   color: inherit;
 }
@@ -159,7 +160,7 @@ p {
   }
 
   h6 {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
   }
 
 
@@ -192,7 +193,7 @@ p {
   }
 
   h6 {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
   }
 
   p {
@@ -231,7 +232,7 @@ p {
   }
 
   h6 {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     font-weight: 500;
   }
 

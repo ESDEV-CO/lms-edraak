@@ -59,7 +59,10 @@ const SignIn = () => {
           <h6>Forgot Password.</h6>
         </div>
         <div className="signin_signup forgot_password">
-          <p>Dont have a account</p> <h6>Sign Up.</h6>
+          <p>Dont have a account</p>{" "}
+          <Link className="signin_options" to={"/signup"}>
+            Sign Up.
+          </Link>
         </div>
       </div>
       <div className="signin_rights">
