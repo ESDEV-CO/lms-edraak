@@ -141,6 +141,7 @@
     overflow: hidden;
     gap: 1.5rem;
     position: relative;
+    padding-bottom: 0.5rem;
 }
 
 .featured_courses {

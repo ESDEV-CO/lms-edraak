@@ -25,7 +25,9 @@ const Navbar = () => {
             <div className="logo_img">
               <img src={require("../../assets/logo.png")} alt="logo" />
             </div>
-            <span className="logo_name">LMS</span>
+            <Link to={"/"} className="logo_name">
+              LMS
+            </Link>
           </div>
           <div className="nav_category">
             <BiGridAlt />
