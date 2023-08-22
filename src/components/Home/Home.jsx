@@ -35,8 +35,10 @@ const Home = () => {
   const [currentIndex2, setCurrentIndex2] = useState(0);
   const [currentIndex3, setCurrentIndex3] = useState(0);
   const [currentIndex4, setCurrentIndex4] = useState(0);
+  const [currentIndex5, setCurrentIndex5] = useState(0);
   const streamToShow = 6;
   const featureToShow = 4;
+  const reviewsToShow = 3;
 
   const streamPrevious = () => {
     if (currentIndex1 > 0) {
@@ -80,6 +82,17 @@ const Home = () => {
   const instNext = () => {
     if (currentIndex4 < StreamData.length - 1) {
       setCurrentIndex4((prevIndex) => prevIndex + 1);
+    }
+  };
+  const reviewsPrevious = () => {
+    if (currentIndex5 > 0) {
+      setCurrentIndex5((prevIndex) => prevIndex - 1);
+    }
+  };
+
+  const reviewsNext = () => {
+    if (currentIndex5 < 7) {
+      setCurrentIndex5((prevIndex) => prevIndex + 1);
     }
   };
 
@@ -456,7 +469,35 @@ const Home = () => {
       <section className="home_page_bottom">
         <h4>What Our Student Have Today</h4>
         <div className="student_review_wrapper">
-          <div className="student_review box_shadow">
+          {StreamData.slice(currentIndex5, currentIndex5 + reviewsToShow)
+            .filter((dt) => dt?.reviews)
+            .map((item) => {
+              return (
+                <div className="student_review box_shadow ">
+                  <p>{item?.reviews}</p>
+                  <span className="student_info">
+                    <img src={item?.image} alt="img1" />
+                    <h5>{item?.name}</h5>
+                  </span>
+                </div>
+              );
+            })}
+          <button
+            onClick={reviewsPrevious}
+            className="carousel_btn box_shadow previous_btn"
+            disabled={currentIndex5 === 0}
+          >
+            <GrFormPrevious />
+          </button>
+          <button
+            onClick={reviewsNext}
+            className="carousel_btn box_shadow next_btn"
+            disabled={currentIndex5 === 7 - 2}
+          >
+            <GrFormNext />
+          </button>
+
+          {/* <div className="student_review box_shadow">
             <p>
               "Donec ac ex eu arcu euismod feugiat. In venenatis bibendum nisi,
               in placerat eros ultricies vitae. Praesent pellentesque blandit
@@ -494,7 +535,7 @@ const Home = () => {
           </button>
           <button className="carousel_btn box_shadow next_btn">
             <GrFormNext />
-          </button>
+          </button> */}
         </div>
       </section>
     </div>

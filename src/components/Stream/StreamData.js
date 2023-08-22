@@ -6,6 +6,9 @@ export const StreamData = [
     image: require("../../assets/img-1.jpg"),
     students: "100k",
     courses: "15",
+    reviews: `Donec ac ex eu arcu euismod feugiat. In venenatis bibendum nisi
+    in placerat eros ultricies vitae. Praesent pellentesque blandit
+    scelerisque. Suspendisse potenti.`,
   },
   {
     id: 2,
@@ -14,6 +17,9 @@ export const StreamData = [
     image: require("../../assets/img-2.jpg"),
     students: "14k",
     courses: "11",
+    reviews: `Donec ac ex eu arcu euismod feugiat. In venenatis bibendum nisi
+    in placerat eros ultricies vitae. Praesent pellentesque blandit
+    scelerisque. Suspendisse potenti.`,
   },
   {
     id: 3,
@@ -22,6 +28,9 @@ export const StreamData = [
     image: require("../../assets/img-9.jpg"),
     students: "1M",
     courses: "25",
+    reviews: `Donec ac ex eu arcu euismod feugiat. In venenatis bibendum nisi
+    in placerat eros ultricies vitae. Praesent pellentesque blandit
+    scelerisque. Suspendisse potenti.`,
   },
   {
     id: 4,
@@ -30,6 +39,9 @@ export const StreamData = [
     students: "1M",
     courses: "25",
     image: require("../../assets/img-4.jpg"),
+    reviews: `Donec ac ex eu arcu euismod feugiat. In venenatis bibendum nisi
+    in placerat eros ultricies vitae. Praesent pellentesque blandit
+    scelerisque. Suspendisse potenti.`,
   },
   {
     id: 5,
@@ -38,6 +50,9 @@ export const StreamData = [
     students: "100k",
     courses: "15",
     image: require("../../assets/img-5.jpg"),
+    reviews: `Donec ac ex eu arcu euismod feugiat. In venenatis bibendum nisi
+    in placerat eros ultricies vitae. Praesent pellentesque blandit
+    scelerisque. Suspendisse potenti.`,
   },
   {
     id: 6,
@@ -46,6 +61,9 @@ export const StreamData = [
     students: "100k",
     courses: "15",
     image: require("../../assets/img-6.jpg"),
+    reviews: `Donec ac ex eu arcu euismod feugiat. In venenatis bibendum nisi
+    in placerat eros ultricies vitae. Praesent pellentesque blandit
+    scelerisque. Suspendisse potenti.`,
   },
   {
     id: 7,
