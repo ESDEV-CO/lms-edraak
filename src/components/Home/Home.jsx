@@ -25,6 +25,9 @@ import { BiLineChart } from "react-icons/bi";
 import { PiBookOpenTextBold } from "react-icons/pi";
 import { AiOutlineCamera } from "react-icons/ai";
 import { FiMusic } from "react-icons/fi";
+import { AiOutlineStar } from "react-icons/ai";
+import { BsPlay } from "react-icons/bs";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -150,6 +153,25 @@ const Home = () => {
                       </h6>
                       <h5 className="course_price">{item?.price}</h5>
                     </div>
+                    <span
+                      className={`${
+                        item?.rating ? "featured_rating" : "hidden"
+                      }`}
+                    >
+                      <AiOutlineStar /> {item?.rating}
+                    </span>
+                    <span
+                      className={`${item?.remarks ? "bestseller" : "hidden"}`}
+                    >
+                      {item?.remarks}
+                    </span>
+                    <span className="video_duration">{item?.duration}</span>
+                    <Link to={"/course-detail"} className="play_mask">
+                      <BsPlay />
+                    </Link>
+                    <span className="featured_cart">
+                      <AiOutlineShoppingCart />
+                    </span>
                   </div>
                 );
               })}
@@ -198,6 +220,15 @@ const Home = () => {
                         By <strong>{item?.instructor_name}</strong>
                       </h6>
                       <h5 className="course_price">{item?.price}</h5>
+                      <span className="video_duration newest_duration">
+                        {item?.duration}
+                      </span>
+                      <Link to={"/course-detail"} className="play_mask">
+                        <BsPlay />
+                      </Link>
+                      <span className=" newest_cart">
+                        <AiOutlineShoppingCart />
+                      </span>
                     </div>
                   </div>
                 );

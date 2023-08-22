@@ -47,6 +47,7 @@ export const FeaturedData = [
     description: "Digital Marketing | Marketing",
     instructor_name: "Poonam Verma",
     price: "$12",
+    duration: "12 hours",
   },
   {
     id: 5,
