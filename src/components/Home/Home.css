@@ -192,8 +192,8 @@
 
 /* user motivation css */
 .home_page_left_user_motivation {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(265px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 1.5rem;
 }
 
@@ -205,6 +205,7 @@
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
+    /* flex: 1; */
 
     & p {
         text-align: center;
@@ -341,11 +342,12 @@
 .home_page_right_recommendation {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 1rem;
     padding: 1.5rem 3rem;
     width: 100%;
-    background: #292C35;
+    background: white;
+    background-image: url(../../assets/get-img.jpg);
     cursor: pointer;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1),
         -2px 2px 4px rgba(0, 0, 0, 0.1),
@@ -354,7 +356,6 @@
     color: white;
 
     & h5 {
-        max-width: 70%;
         font-weight: 600;
     }
 
@@ -362,7 +363,7 @@
         font-size: 14px;
         font-weight: 400;
         color: white;
-        max-width: 70%;
+        text-align: center;
     }
 }
 
@@ -431,7 +432,25 @@
     }
 }
 
-@media (min-width:1024px) {
+@media (min-width:640px) {
+    .featured_courses {
+        width: 47%;
+    }
+}
+
+@media (min-width:768px) {
+    .home_page_left_user_motivation {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .user_motivation {
+        width: 47%;
+    }
+}
+
+@media (min-width:1280px) {
     .home_page {
         padding: 1.5rem 2rem;
         flex-direction: column;
@@ -456,150 +475,8 @@
         gap: 1.5rem;
     }
 
-    .home_btn {
-        font-size: 0.875rem;
-        font-weight: 500;
-        color: #afafaf;
-        text-align: right;
-    }
-
-    .home_page_left_live_stream_container {
-        gap: 1rem;
-    }
-
     .home_stream_info_wrapper {
-        background: rgba(51, 1, 51, 0.1);
         width: 50%;
-        padding: 0.9375rem;
-    }
-
-    .home_stream_info {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        background: white;
-        align-items: center;
-        border-radius: 3px;
-        padding: 0.9375rem 0.625rem;
-        background: rgba(255, 255, 255, 0.06);
-        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.13);
-
-        & img {
-            width: 2.5rem;
-            border-radius: 50%;
-        }
-    }
-
-    .stream_status {
-        font-size: 14px;
-        font-weight: 400;
-        color: #686f7a;
-        text-align: center;
-        position: relative;
-
-        &::before {
-            content: '';
-            width: 0.35rem;
-            height: 0.35rem;
-            border-radius: 50%;
-            background: var(--pri_bg);
-            position: absolute;
-            top: 0;
-            right: -7px;
-        }
-    }
-
-    .carousel_btn {
-        font-size: 1.25rem;
-        width: 1.5rem;
-        height: 1.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 2px;
-        transition: 0.3s;
-    }
-
-    .carousel_btn:hover {
-        background: var(--pri_bg);
-    }
-
-    .previous_btn {
-        position: absolute;
-        left: 0.5%;
-        bottom: 50%;
-        z-index: 1;
-
-    }
-
-    .next_btn {
-        position: absolute;
-        right: 0.5%;
-        bottom: 50%;
-        z-index: 1;
-    }
-
-    .home_page_left_featured_container {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-
-    .featured_carousel {
-        display: flex;
-        overflow: hidden;
-        gap: 1.5rem;
-        position: relative;
-    }
-
-    .featured_courses {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        padding: 1rem;
-        width: 31%;
-        cursor: pointer;
-        border-radius: 5px;
-        transition: 0.3s;
-
-        & h5 {
-            font-weight: 600;
-        }
-
-        &:hover {
-            transform: translateY(2px);
-        }
-    }
-
-    .featured_courses_views {
-        display: flex;
-        align-items: center;
-        gap: 0.35rem;
-    }
-
-    .course_author {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .course_share {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1rem;
-        color: #686f7a;
-        margin-left: auto;
-
-    }
-
-    /* user motivation css */
-    .home_page_left_user_motivation {
-        display: grid;
-        /* grid-template-columns: repeat(auto-fill, minmax(450px, 1fr)); */
-        gap: 1.5rem;
-        margin-top: 1.5rem;
     }
 
     .user_motivation {
@@ -610,7 +487,7 @@
         flex-direction: column;
         align-items: center;
         gap: 0.5rem;
-        /* width: 50%; */
+        width: 48%;
     }
 
     .motivation_logo {
@@ -755,6 +632,7 @@
             font-weight: 400;
             color: white;
             max-width: 70%;
+            text-align: start;
         }
 
         & button:hover {
@@ -816,5 +694,12 @@
         & img {
             width: 2.5rem;
         }
+    }
+}
+
+@media (min-width:1440px) {
+
+    .featured_courses {
+        width: 31%;
     }
 }

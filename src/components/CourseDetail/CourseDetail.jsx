@@ -60,7 +60,7 @@ const CourseDetail = () => {
             <span className="instructor_img">
               <img src={require("../../assets/img-1.jpg")} alt="img1" />
             </span>
-            <span className="instructor_info">
+            <span className="course_instructor_info">
               <h5>Johnson Smith</h5>
               <button className="primary_btn">Subscribe</button>
             </span>

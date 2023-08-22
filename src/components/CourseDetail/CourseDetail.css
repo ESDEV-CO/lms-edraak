@@ -124,7 +124,7 @@
     width: 3rem;
 }
 
-.instructor_info {
+.course_instructor_info {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
@@ -344,7 +344,7 @@
         width: 3rem;
     }
 
-    .instructor_info {
+    .course_instructor_info {
         display: flex;
         flex-direction: column;
         gap: 0.25rem;

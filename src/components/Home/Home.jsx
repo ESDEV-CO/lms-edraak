@@ -25,6 +25,7 @@ import { BiLineChart } from "react-icons/bi";
 import { PiBookOpenTextBold } from "react-icons/pi";
 import { AiOutlineCamera } from "react-icons/ai";
 import { FiMusic } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [currentIndex1, setCurrentIndex1] = useState(0);
@@ -122,7 +123,9 @@ const Home = () => {
           <div className="home_page_left_featured_container">
             <div className="home_page_left_heading">
               <h4>Featured Courses</h4>
-              <button className="home_btn">See All</button>
+              <Link to={"/explore"} className="home_btn">
+                See All
+              </Link>
             </div>
             <div className="featured_carousel">
               {FeaturedData.slice(
@@ -169,7 +172,9 @@ const Home = () => {
           <div className="home_page_left_featured_container">
             <div className="home_page_left_heading">
               <h4>Newest Courses</h4>
-              <button className="home_btn">See All</button>
+              <Link to={"/explore"} className="home_btn">
+                See All
+              </Link>
             </div>
             <div className="featured_carousel">
               {Newest_dData.slice(
