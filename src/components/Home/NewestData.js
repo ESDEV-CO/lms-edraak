@@ -8,6 +8,7 @@ export const Newest_dData = [
     description: "Development | CSS",
     instructor_name: "John Doe",
     price: "$4",
+    duration: "12 hours",
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ export const Newest_dData = [
     description: "Development | JavaScript",
     instructor_name: "Jassica William",
     price: "$5",
+    duration: "28 hours",
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ export const Newest_dData = [
     description: "Development | Web Development",
     instructor_name: "Joginder Singh",
     price: "$9",
+    duration: "12 hours",
   },
   {
     id: 4,
@@ -38,6 +41,8 @@ export const Newest_dData = [
     description: "IT & Software | Ethical Hacking",
     instructor_name: "Poonam Verma",
     price: "$10",
+    rating: "5.0",
+    duration: "1 hour",
   },
   {
     id: 5,
@@ -48,6 +53,8 @@ export const Newest_dData = [
     description: "Development | Sass",
     instructor_name: "Rock William",
     price: "$6",
+    rating: "3.5",
+    duration: "28 hours",
   },
   {
     id: 6,
@@ -58,6 +65,7 @@ export const Newest_dData = [
     description: "Development | Node.js",
     instructor_name: "John Doe",
     price: "$3",
+    duration: "30 hours",
   },
   {
     id: 7,
@@ -68,6 +76,8 @@ export const Newest_dData = [
     description: "Design | Wordpress",
     instructor_name: "Joy dua",
     price: "$14",
+    rating: "5.0",
+    duration: "21 hours",
   },
   {
     id: 8,
@@ -78,5 +88,6 @@ export const Newest_dData = [
     description: "Design | Vue JS",
     instructor_name: "Manreet Kaur",
     price: "$10",
+    duration: "22 hours",
   },
 ];

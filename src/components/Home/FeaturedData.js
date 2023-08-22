@@ -8,6 +8,9 @@ export const FeaturedData = [
     description: "Web Development | Python",
     instructor_name: "John Doe",
     price: "$10",
+    rating: "4.5",
+    remarks: "BEST SELLER",
+    duration: "25 hours",
   },
   {
     id: 2,
@@ -18,6 +21,9 @@ export const FeaturedData = [
     description: "Development | JavaScript",
     instructor_name: "Jassica William",
     price: "$10",
+    rating: "4.5",
+    remarks: "BEST SELLER",
+    duration: "28 hours",
   },
   {
     id: 3,
@@ -28,6 +34,9 @@ export const FeaturedData = [
     description: "Development | C++",
     instructor_name: "Joginder Singh",
     price: "$13",
+    rating: "4.5",
+    remarks: "BEST SELLER",
+    duration: "12 hours",
   },
   {
     id: 4,
@@ -48,6 +57,9 @@ export const FeaturedData = [
     description: "Office Productivity | Excel",
     instructor_name: "Rock William",
     price: "$6",
+    rating: "5.0",
+    remarks: "BEST SELLER",
+    duration: "1 hour",
   },
   {
     id: 6,
@@ -58,6 +70,9 @@ export const FeaturedData = [
     description: "Development | Angular",
     instructor_name: "John Doe",
     price: "$15",
+    rating: "4.5",
+    remarks: "BEST SELLER",
+    duration: "1.5 hours",
   },
   {
     id: 7,
@@ -68,6 +83,9 @@ export const FeaturedData = [
     description: "Design | Wordpress",
     instructor_name: "Sabnam Singh",
     price: "$13",
+    rating: "4.5",
+    remarks: "BEST SELLER",
+    duration: "28 hours",
   },
   {
     id: 8,
@@ -78,5 +96,8 @@ export const FeaturedData = [
     description: "Design | CSS",
     instructor_name: "Jashanpreet Singh",
     price: "$10",
+    rating: "4.5",
+    remarks: "BEST SELLER",
+    duration: "28 hours",
   },
 ];
