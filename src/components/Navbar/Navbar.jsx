@@ -1,18 +1,23 @@
 import React, { useState } from "react";
 import "./Navbar.css";
+import SideBar from "../Sidebar/SideBar";
+import { Link } from "react-router-dom";
+
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BiGridAlt } from "react-icons/bi";
 import { BsSearch } from "react-icons/bs";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { AiOutlineMail } from "react-icons/ai";
 import { IoMdNotificationsOutline } from "react-icons/io";
-import SideBar from "../Sidebar/SideBar";
-import { Link } from "react-router-dom";
+import { TbCircleCheck } from "react-icons/tb";
+import { FiMoon } from "react-icons/fi";
+import Toggle from "../Toggle/Toggle";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [isMessage, setIsMessage] = useState(false);
   const [isNotification, setIsNotification] = useState(false);
+  const [isUser, setIsUser] = useState(false);
 
   return (
     <>
@@ -59,9 +64,9 @@ const Navbar = () => {
           >
             <IoMdNotificationsOutline />
           </button>
-          <span className="user_dp">
+          <button onClick={() => setIsUser(!isUser)} className="user_dp">
             <img src={require("../../assets/hd_dp.jpg")} alt="hd_dp" />
-          </span>
+          </button>
         </div>
       </div>
       <div>
@@ -146,6 +151,45 @@ const Navbar = () => {
               </span>
             </div>
             <button className="primary_btn drop_down_btn">View All</button>
+          </div>
+        )}
+        {isUser && (
+          <div className="user_toggle box_shadow">
+            <div className="user_toggle_info">
+              <img
+                src={require("../../assets/img-17.jpg")}
+                alt="instructor_img"
+              />
+              <div className="user_info_wrapper">
+                <span className="instructor_info">
+                  <h6>Joginder Singh</h6>
+                  <span>
+                    <TbCircleCheck />
+                  </span>
+                </span>
+                <p>gambol943@gmail.com</p>
+              </div>
+            </div>
+            <h5>view Instructor Profile</h5>
+            <div className="night_mode">
+              <span className="night_mode_moon">
+                <FiMoon />
+              </span>
+              <h6>Night Mode</h6>
+              <span className="night_mode_switch">
+                <Toggle />
+              </span>
+            </div>
+            <div className="night_mode_list">
+              <Link to={"/dashboard"} className="user_toggle_link">
+                LMS Dashboard
+              </Link>
+              <h6 className="user_toggle_link">Paid Members</h6>
+              <h6 className="user_toggle_link">Setting</h6>
+              <h6 className="user_toggle_link">Help</h6>
+              <h6 className="user_toggle_link">Send Feedback</h6>
+              <h6 className="user_toggle_link">Sign Out</h6>
+            </div>
           </div>
         )}
       </div>
