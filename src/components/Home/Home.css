@@ -651,6 +651,10 @@
         width: 30%;
     }
 
+    .video_duration {
+        top: 40%;
+    }
+
 }
 
 @media (min-width:1280px) {
@@ -658,4 +662,13 @@
     .featured_courses {
         width: 31%;
     }
+
+    .video_duration {
+        top: 38%;
+    }
+
+    .newest_duration {
+        top: 43.5%;
+    }
+
 }
