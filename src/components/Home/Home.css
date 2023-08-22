@@ -242,7 +242,7 @@
     }
 
     & p {
-        font-size: 13px;
+        /* font-size: 13px; */
         color: #686f7a;
         font-weight: 400;
         text-overflow: ellipsis;
@@ -309,7 +309,7 @@
     border-radius: 5px;
 
     & p {
-        font-size: 14px;
+        /* font-size: 14px; */
         font-weight: 400;
         color: #686f7a;
         text-align: center;
@@ -360,10 +360,13 @@
     }
 
     & p {
-        font-size: 14px;
         font-weight: 400;
         color: white;
         text-align: center;
+    }
+
+    & button:hover {
+        background: #C72127;
     }
 }
 
@@ -415,7 +418,7 @@
     border-radius: 5px;
 
     & p {
-        font-size: 14px;
+        /* font-size: 14px; */
         font-weight: 400;
         color: #686f7a;
         line-height: 24px;
@@ -450,7 +453,7 @@
     }
 }
 
-@media (min-width:1280px) {
+@media (min-width:1024px) {
     .home_page {
         padding: 1.5rem 2rem;
         flex-direction: column;
@@ -481,223 +484,37 @@
 
     .user_motivation {
         padding: 1.5rem 2.5rem;
-        cursor: pointer;
-        border-radius: 5px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
         width: 48%;
     }
 
-    .motivation_logo {
-        background: var(--sec_bg);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.75rem;
-        padding: 1rem;
-        border-radius: 3px;
-    }
-
-    .popular_instructor {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 1.5rem 3rem;
-        width: 100%;
-        cursor: pointer;
-        border-radius: 5px;
-        transition: 0.3s;
-
-        & h5 {
-            font-weight: 600;
-        }
-
-        &:hover {
-            transform: translateY(2px);
-        }
-
-        & p {
-            font-size: 13px;
-            color: #686f7a;
-            font-weight: 400;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-
-        & button {
-            font-size: 14px;
-            font-weight: 600;
-            color: #333;
-            transition: 0.3s;
-
-            &:hover {
-                color: var(--pri_bg);
-            }
-        }
-    }
-
-    .instructor_info {
-        display: flex;
-        gap: 0.35rem;
-
-        & span {
-            color: #1DA1F2;
-            font-size: 1rem;
-        }
-    }
-
-    .instructor_social {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    .social_icons {
-        font-size: 1.15rem;
-        padding: 0.5rem;
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .instructor_students {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-
-    }
-
-    .right_instructor:hover {
-        transform: none;
-    }
-
-    .home_page_right_stream {
-        gap: 1rem;
-        padding: 1.5rem 3rem;
-        width: 100%;
-
-        & p {
-            font-size: 14px;
-            font-weight: 400;
-            color: #686f7a;
-            text-align: center;
-        }
-    }
-
-    .stream_heading {
-        width: 100%;
-        align-self: flex-start;
-        border-bottom: 1px solid rgba(177, 177, 177, 0.5);
-        padding-bottom: 1rem;
-    }
-
-    .stream_logo {
-        background: var(--sec_bg);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.75rem;
-        padding: 1rem;
-        border-radius: 50%;
-    }
-
-    .stream_info {
-        font-size: 12px;
-        font-weight: 400;
-        color: #686f7a;
-    }
 
     .home_page_right_recommendation {
-        display: flex;
-        flex-direction: column;
         align-items: flex-start;
-        gap: 1rem;
-        padding: 1.5rem 3rem;
-        width: 100%;
-        border-radius: 5px;
-        color: white;
+
 
         & h5 {
             max-width: 70%;
-            font-weight: 600;
         }
 
         & p {
-            font-size: 14px;
-            font-weight: 400;
-            color: white;
             max-width: 70%;
             text-align: start;
         }
 
-        & button:hover {
-            background: #C72127;
-        }
-    }
-
-
-    .top_categories {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        align-self: flex-start;
-        color: #686F87;
-        transition: 0.3s;
-
-        &:hover {
-            color: var(--pri_clr);
-        }
-    }
-
-    .home_page_bottom {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
     }
 
     .student_review_wrapper {
-        display: flex;
         flex-direction: row;
-        gap: 1.5rem;
-        justify-content: center;
-        position: relative;
 
     }
 
     .student_review {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        padding: 1.5rem;
         width: 30%;
-        cursor: pointer;
-        border-radius: 5px;
-
-        & p {
-            font-size: 14px;
-            font-weight: 400;
-            color: #686f7a;
-            line-height: 24px;
-        }
     }
 
-    .student_info {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-
-        & img {
-            width: 2.5rem;
-        }
-    }
 }
 
-@media (min-width:1440px) {
+@media (min-width:1280px) {
 
     .featured_courses {
         width: 31%;
