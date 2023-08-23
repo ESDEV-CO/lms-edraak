@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./About.css";
 import { Link } from "react-router-dom";
 import { CiMobile3 } from "react-icons/ci";
 import { GoPeople } from "react-icons/go";
 import { LiaCertificateSolid } from "react-icons/lia";
 import { TfiWorld } from "react-icons/tfi";
+import { TbCircleCheck } from "react-icons/tb";
+import { FiMoon } from "react-icons/fi";
+import Toggle from "../Toggle/Toggle";
 
 const About = () => {
+  const [isUser, setIsUser] = useState(false);
+
   return (
     <div className="about">
       <div className="checkout_nav box_shadow ">
@@ -21,9 +26,9 @@ const About = () => {
             LMS
           </Link>
         </div>
-        <span className="user_dp">
+        <button onClick={() => setIsUser(!isUser)} className="user_dp">
           <img src={require("../../assets/hd_dp.jpg")} alt="hd_dp" />
-        </span>
+        </button>
       </div>
       <div className="about_wrapper">
         <section className="about_header">
@@ -169,6 +174,41 @@ const About = () => {
           </div>
         </section>
       </div>
+      {isUser && (
+        <div className="user_toggle box_shadow check_out_user">
+          <div className="user_toggle_info">
+            <img
+              src={require("../../assets/img-17.jpg")}
+              alt="instructor_img"
+            />
+            <div className="user_info_wrapper">
+              <span className="instructor_info">
+                <h6>Joginder Singh</h6>
+                <span>
+                  <TbCircleCheck />
+                </span>
+              </span>
+              <p>gambol943@gmail.com</p>
+            </div>
+          </div>
+          <h5>view Instructor Profile</h5>
+          <div className="night_mode">
+            <span className="night_mode_moon">
+              <FiMoon />
+            </span>
+            <h6>Night Mode</h6>
+            <span className="night_mode_switch">
+              <Toggle />
+            </span>
+          </div>
+          <div className="night_mode_list">
+            <Link to={"/dashboard"} className="user_toggle_link">
+              LMS Dashboard
+            </Link>
+            <h6 className="user_toggle_link">Sign Out</h6>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

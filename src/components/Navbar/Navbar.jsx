@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Navbar.css";
 import SideBar from "../Sidebar/SideBar";
 import { Link } from "react-router-dom";
@@ -20,9 +20,26 @@ const Navbar = () => {
   const [isNotification, setIsNotification] = useState(false);
   const [isUser, setIsUser] = useState(false);
   // console.log("url :::", window.location?.pathname);
+  const navbarRef = useRef(null);
+
+  const handleClickOutside = (event) => {
+    if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+      setIsMessage(false);
+      setIsNotification(false);
+      setIsUser(false);
+    }
+  };
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
   return (
     <>
-      <div className="navbar">
+      <div ref={navbarRef} className="navbar">
         <div className="navbar_logo_info">
           <button className="nav_hamburger" onClick={() => setToggle(!toggle)}>
             <GiHamburgerMenu />
