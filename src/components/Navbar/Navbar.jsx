@@ -12,13 +12,14 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 import { TbCircleCheck } from "react-icons/tb";
 import { FiMoon } from "react-icons/fi";
 import Toggle from "../Toggle/Toggle";
+import DashSideBar from "../DashSideBar/DashSideBar";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [isMessage, setIsMessage] = useState(false);
   const [isNotification, setIsNotification] = useState(false);
   const [isUser, setIsUser] = useState(false);
-
+  // console.log("url :::", window.location?.pathname);
   return (
     <>
       <div className="navbar">
@@ -70,7 +71,11 @@ const Navbar = () => {
         </div>
       </div>
       <div>
-        <div className="toggle_sidebar">{toggle && <SideBar />}</div>
+        {window.location?.pathname === "/dashboard" ? (
+          <div className="toggle_sidebar">{toggle && <DashSideBar />}</div>
+        ) : (
+          <div className="toggle_sidebar">{toggle && <SideBar />}</div>
+        )}
         {isMessage && (
           <div className="message_toggle box_shadow">
             <div className="message_toggle_user">

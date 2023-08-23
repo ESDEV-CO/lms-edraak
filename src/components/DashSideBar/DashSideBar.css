@@ -1,0 +1,11 @@
+.dash_sidebar {
+    width: 50%;
+    height: 100svh;
+    background: white;
+    padding-bottom: 1rem;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+}
