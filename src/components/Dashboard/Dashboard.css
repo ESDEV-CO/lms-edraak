@@ -1,0 +1,30 @@
+.dashboard {
+    width: 100svw;
+    display: flex;
+}
+
+.dash_side_icons_wrapper {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.dash_side_icons {
+    color: var(--pri_clr);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.15rem;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: var(--pri_bg);
+        background: #FFECEC;
+    }
+}

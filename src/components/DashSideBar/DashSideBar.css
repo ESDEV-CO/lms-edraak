@@ -1,11 +1,78 @@
 .dash_sidebar {
     width: 50%;
-    height: 100svh;
+    height: 100%;
     background: white;
     padding-bottom: 1rem;
+    /* overflow-y: scroll;
 
-    &::-webkit-scrollbar {
+    & ::-webkit-scrollbar {
         display: none;
+    } */
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+}
+
+.dash_sidebar_heading {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    transition: 0.3s;
+
+    & h5 {
+        color: var(--pri_clr);
+        transition: 0.3s;
+    }
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:hover .dash_sidebar_icon,
+    &:active .dash_sidebar_icon,
+    &:focus .dash_sidebar_icon,
+    &:hover h5,
+    &:active h5,
+    &:focus h5 {
+        color: var(--pri_bg);
+        background: #FFECEC;
+    }
+}
+
+.dash_sidebar_icon {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    color: var(--pri_clr);
+    transition: 0.3s;
+
+}
+
+@media (min-width:580px) {
+    .dash_sidebar {
+        width: 38%;
+    }
+}
+
+@media (min-width:640px) {
+    .dash_sidebar {
+        width: 35%;
+    }
+
+}
+
+@media (min-width:768px) {
+    .dash_sidebar {
+        width: 30%;
+    }
+}
+
+@media (min-width:1024px) {
+    .dash_sidebar {
+        width: 15%;
     }
 
 }

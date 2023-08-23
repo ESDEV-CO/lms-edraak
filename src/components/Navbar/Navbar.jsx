@@ -89,7 +89,9 @@ const Navbar = () => {
       </div>
       <div>
         {window.location?.pathname === "/dashboard" ? (
-          <div className="toggle_sidebar">{toggle && <DashSideBar />}</div>
+          <div className="toggle_sidebar dash_side_toggle">
+            {toggle && <DashSideBar />}
+          </div>
         ) : (
           <div className="toggle_sidebar">{toggle && <SideBar />}</div>
         )}

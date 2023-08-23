@@ -156,6 +156,10 @@
     z-index: 22;
 }
 
+/* .dash_side_toggle {
+    left: 4.1%;
+} */
+
 .toggle_user_info {
     display: flex;
     flex-direction: column;
