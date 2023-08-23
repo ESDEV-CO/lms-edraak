@@ -5,7 +5,7 @@ import Footer from "../components/Footer/Footer";
 
 const DashboardScreen = () => {
   return (
-    <div className="dashboard_container">
+    <div>
       <Navbar />
       <Dashboard />
       <Footer />
