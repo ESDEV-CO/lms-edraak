@@ -24,7 +24,7 @@ const Dashboard = () => {
         <Link className="dash_side_icons">
           <BsGrid />
         </Link>
-        <Link to={"/courses"} className="dash_side_icons">
+        <Link className="dash_side_icons">
           <BiBookAlt />
         </Link>
         <Link className="dash_side_icons">

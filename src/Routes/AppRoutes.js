@@ -9,6 +9,10 @@ import CourseDetailScreen from "../Screens/CourseDetailScreen";
 import StreamScreen from "../Screens/StreamScreen";
 import AboutScreen from "../Screens/AboutScreen";
 import DashboardScreen from "../Screens/DashboardScreen";
+import SignIn from "../components/SignIn/SignIn";
+import SignUp from "../components/SignUp/SignUp";
+import Dashboard from "../components/Dashboard/Dashboard";
+import NotFoundPage from "../components/NotFoundPage/NotFoundPage";
 
 function AppRoutes() {
   return (
@@ -22,7 +26,12 @@ function AppRoutes() {
         <Route path="/course-detail" element={<CourseDetailScreen />} />
         <Route path="/stream" element={<StreamScreen />} />
         <Route path="/about" element={<AboutScreen />} />
-        <Route path="/dashboard" element={<DashboardScreen />} />
+        <Route path="/dashboard" element={<DashboardScreen />}>
+          <Route index element={<Dashboard />} />
+          <Route path="courses" element={<SignIn />} />
+          <Route path="create-course" element={<SignUp />} />
+        </Route>
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>
   );
