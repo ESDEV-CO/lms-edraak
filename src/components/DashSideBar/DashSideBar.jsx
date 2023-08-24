@@ -19,13 +19,13 @@ import { TbMessageReport } from "react-icons/tb";
 const DashSideBar = () => {
   return (
     <div className="dash_sidebar">
-      <Link className="dash_sidebar_heading ">
+      <Link to={"/dashboard"} className="dash_sidebar_heading ">
         <span className="dash_sidebar_icon">
           <BsGrid />
         </span>
         <h5>Dashboard</h5>
       </Link>
-      <Link className="dash_sidebar_heading ">
+      <Link to={"/dashboard/courses"} className="dash_sidebar_heading ">
         <span className="dash_sidebar_icon">
           <BiBookAlt />
         </span>
@@ -37,7 +37,7 @@ const DashSideBar = () => {
         </span>
         <h5>Analysis</h5>
       </Link>
-      <Link className="dash_sidebar_heading ">
+      <Link to={"/dashboard/create-course"} className="dash_sidebar_heading ">
         <span className="dash_sidebar_icon">
           <GrAddCircle />
         </span>

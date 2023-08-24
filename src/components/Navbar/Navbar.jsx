@@ -19,7 +19,10 @@ const Navbar = () => {
   const [isMessage, setIsMessage] = useState(false);
   const [isNotification, setIsNotification] = useState(false);
   const [isUser, setIsUser] = useState(false);
-  // console.log("url :::", window.location?.pathname);
+  // console.log(
+  //   "url :::",
+  //   window.location?.pathname.split("/").includes("dashboard")
+  // );
   const navbarRef = useRef(null);
 
   const handleClickOutside = (event) => {
@@ -88,7 +91,7 @@ const Navbar = () => {
         </div>
       </div>
       <div>
-        {window.location?.pathname === "/dashboard" ? (
+        {window.location?.pathname.split("/").includes("dashboard") ? (
           <div className="toggle_sidebar dash_side_toggle">
             {toggle && <DashSideBar />}
           </div>

@@ -8,7 +8,7 @@ import ExploreScreen from "../Screens/ExploreScreen";
 import CourseDetailScreen from "../Screens/CourseDetailScreen";
 import StreamScreen from "../Screens/StreamScreen";
 import AboutScreen from "../Screens/AboutScreen";
-import DashboardScreen from "../Screens/DashboardScreen";
+import DashboardScreen from "../components/DashboardScreen/DashboardScreen";
 import SignIn from "../components/SignIn/SignIn";
 import SignUp from "../components/SignUp/SignUp";
 import Dashboard from "../components/Dashboard/Dashboard";
