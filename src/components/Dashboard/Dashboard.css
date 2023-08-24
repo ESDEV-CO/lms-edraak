@@ -126,7 +126,11 @@
 
 @media (min-width:640px) {
     .dash_featured_courses {
-        width: 91%;
+        width: 100%;
+
+        & img {
+            width: 100%;
+        }
     }
 
 }
@@ -189,6 +193,14 @@
         position: relative;
     }
 
+    .dash_carousel_right {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        width: 50%;
+        height: 50%;
+        position: relative;
+    }
 
     .dash_previous_btn {
         position: absolute;
@@ -204,18 +216,11 @@
         z-index: 1;
     }
 
-    .dash_carousel_right {
-        display: flex;
-        flex-direction: column;
-        gap: 1.25rem;
-        width: 50%;
-    }
-
     .dash_profile_analysis {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
-        width: 30%;
+        width: 50%;
     }
 
     .dash_course_info_wrapper {
@@ -231,5 +236,15 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+
+    .dash_news_wrapper {
+        width: 98%;
+        padding: 1rem;
+
+        & img {
+            width: 100%;
+            object-fit: cover;
+        }
     }
 }

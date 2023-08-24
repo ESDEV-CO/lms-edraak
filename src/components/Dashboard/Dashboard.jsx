@@ -5,18 +5,32 @@ import { BiBookAlt } from "react-icons/bi";
 import { GrFormPrevious } from "react-icons/gr";
 import { GrFormNext } from "react-icons/gr";
 import { FeaturedData } from "../Home/FeaturedData";
+import { NewsData } from "./NewsData";
 
 const Dashboard = () => {
+  const [currentIndex1, setCurrentIndex1] = useState(0);
   const [currentIndex2, setCurrentIndex2] = useState(0);
-  const featureToShow = 2;
+  const featureToShow = 1;
+  const newsToShow = 1;
   const featuredPrevious = () => {
+    if (currentIndex1 > 0) {
+      setCurrentIndex1((prevIndex) => prevIndex - 1);
+    }
+  };
+
+  const featuredNext = () => {
+    if (currentIndex1 < 4) {
+      setCurrentIndex1((prevIndex) => prevIndex + 1);
+    }
+  };
+  const newsPrevious = () => {
     if (currentIndex2 > 0) {
       setCurrentIndex2((prevIndex) => prevIndex - 1);
     }
   };
 
-  const featuredNext = () => {
-    if (currentIndex2 < 4) {
+  const newsNext = () => {
+    if (currentIndex2 < NewsData.length - 1) {
       setCurrentIndex2((prevIndex) => prevIndex + 1);
     }
   };
@@ -89,7 +103,7 @@ const Dashboard = () => {
           <div className="dash_carousel_left">
             <h4>Latest Courses Performance</h4>
             <div className="featured_carousel">
-              {FeaturedData.slice(currentIndex2, currentIndex2 + featureToShow)
+              {FeaturedData.slice(currentIndex1, currentIndex1 + featureToShow)
                 .filter((dt) => dt?.review)
                 .map((item) => {
                   return (
@@ -120,19 +134,49 @@ const Dashboard = () => {
             <button
               onClick={featuredPrevious}
               className="carousel_btn box_shadow dash_previous_btn"
-              disabled={currentIndex2 === 0}
+              disabled={currentIndex1 === 0}
             >
               <GrFormPrevious />
             </button>
             <button
               onClick={featuredNext}
               className="carousel_btn box_shadow dash_next_btn"
-              disabled={currentIndex2 === 4 - 2}
+              disabled={currentIndex1 === 4 - 2}
             >
               <GrFormNext />
             </button>
           </div>
-          <div className="dash_carousel_right"></div>
+          <div className="dash_carousel_right">
+            <h4>News</h4>
+            <div className="featured_carousel">
+              {NewsData.slice(currentIndex2, currentIndex2 + newsToShow).map(
+                (item) => {
+                  return (
+                    <div className="dash_news_wrapper box_shadow">
+                      <img src={item?.image} alt="news_img" />
+                      <h5>{item?.news}</h5>
+                      <p>{item?.description}</p>
+                      <h5>Learn More</h5>
+                    </div>
+                  );
+                }
+              )}
+            </div>
+            <button
+              onClick={newsPrevious}
+              className="carousel_btn box_shadow dash_previous_btn"
+              disabled={currentIndex2 === 0}
+            >
+              <GrFormPrevious />
+            </button>
+            <button
+              onClick={newsNext}
+              className="carousel_btn box_shadow dash_next_btn"
+              disabled={currentIndex2 === NewsData.length - 1}
+            >
+              <GrFormNext />
+            </button>
+          </div>
         </div>
         <div className="dash_profile_analysis"></div>
       </div>
