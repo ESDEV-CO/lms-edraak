@@ -4,6 +4,18 @@
     padding: 1rem;
     flex: 1;
     gap: 0.5rem;
+
+    & h5,
+    & h6 {
+        color: var(--pri_clr);
+        cursor: pointer;
+
+    }
+
+    & h3 {
+        color: var(--pri_clr);
+    }
+
 }
 
 .container_heading {
@@ -200,6 +212,7 @@
         width: 50%;
         height: 50%;
         position: relative;
+
     }
 
     .dash_previous_btn {
@@ -220,7 +233,6 @@
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
-        width: 50%;
     }
 
     .dash_course_info_wrapper {
@@ -230,21 +242,79 @@
 
         border-bottom: 1px solid #efefef;
         padding-bottom: 0.5rem;
+
     }
 
     .dash_course_info {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        color: #686f7a !important;
     }
 
     .dash_news_wrapper {
         width: 98%;
         padding: 1rem;
+        border-radius: 3px;
 
         & img {
             width: 100%;
             object-fit: cover;
         }
     }
+
+    .subscribers {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        border-radius: 3px;
+
+        & h6 {
+            color: #686f7a;
+            font-weight: 400;
+            transition: 0.3s;
+
+            &:hover {
+                color: var(--pri_clr);
+            }
+        }
+    }
+
+    .subscribers_details_wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        border-top: 1px solid #efefef;
+        border-bottom: 1px solid #efefef;
+        padding: 0.5rem 0;
+    }
+
+    .subscribers_details {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .subscriber_insites {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+
+        & span {
+            color: #ed2a26;
+        }
+    }
+
+    .dash_right_component {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 30%;
+    }
+
+    .pending_btn {
+        width: 20%;
+    }
+
 }

@@ -4,6 +4,9 @@ import { BsGrid } from "react-icons/bs";
 import { BiBookAlt } from "react-icons/bi";
 import { GrFormPrevious } from "react-icons/gr";
 import { GrFormNext } from "react-icons/gr";
+import { BsArrowDown } from "react-icons/bs";
+import { BsArrowUp } from "react-icons/bs";
+
 import { FeaturedData } from "../Home/FeaturedData";
 import { NewsData } from "./NewsData";
 
@@ -178,7 +181,65 @@ const Dashboard = () => {
             </button>
           </div>
         </div>
-        <div className="dash_profile_analysis"></div>
+        <div className="dash_right_component">
+          <div className="dash_profile_analysis ">
+            <h4>Profile Analysis</h4>
+            <div className="subscribers box_shadow">
+              <h6>Current Subscribers</h6>
+              <h3>856</h3>
+              <div className="subscribers_details_wrapper">
+                <div className="subscribers_details">
+                  <h6>Views</h6>
+                  <span className="subscriber_insites">
+                    <h6>17K</h6>
+                    <span>
+                      <BsArrowDown />
+                      75 %
+                    </span>
+                  </span>
+                </div>
+                <div className="subscribers_details">
+                  <h6>Enroll (per hour)</h6>
+                  <span className="subscriber_insites">
+                    <h6>1</h6>
+                    <span>
+                      <BsArrowUp />
+                      100 %
+                    </span>
+                  </span>
+                </div>
+                <div className="subscribers_details">
+                  <h6>Purchased (per hour)</h6>
+                  <span className="subscriber_insites">
+                    <h6>50</h6>
+                    <span>
+                      <BsArrowUp />
+                      70 %
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <h5>Go to Profile Analytics</h5>
+            </div>
+          </div>
+          <div className="dash_profile_analysis ">
+            <h4>Submit Courses</h4>
+            <div className="subscribers box_shadow">
+              <h5>The Complete JavaScript Course 2020: Build Real Projects!</h5>
+              <button className="primary_btn pending_btn">Pending</button>
+              <h6 style={{ fontStyle: "italic" }}>Submitted 1 days ago</h6>
+              <h6>Delete</h6>
+            </div>
+          </div>
+          <div className="dash_profile_analysis ">
+            <h4>Whats New in Edututs+</h4>
+            <div className="subscribers box_shadow">
+              <h6>Improved performance on Studio Dashboard</h6>
+              <h6>See more Dashboard updates</h6>
+              <h6>See issues-at-glance for Live</h6>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
