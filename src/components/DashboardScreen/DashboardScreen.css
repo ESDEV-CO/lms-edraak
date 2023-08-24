@@ -27,6 +27,10 @@
     }
 }
 
+.dash_screen_outlet {
+    flex: 1;
+}
+
 
 @media (min-width:990px) {
 

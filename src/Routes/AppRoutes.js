@@ -9,10 +9,15 @@ import CourseDetailScreen from "../Screens/CourseDetailScreen";
 import StreamScreen from "../Screens/StreamScreen";
 import AboutScreen from "../Screens/AboutScreen";
 import DashboardScreen from "../components/DashboardScreen/DashboardScreen";
-import SignIn from "../components/SignIn/SignIn";
-import SignUp from "../components/SignUp/SignUp";
 import Dashboard from "../components/Dashboard/Dashboard";
 import NotFoundPage from "../components/NotFoundPage/NotFoundPage";
+import DashCourse from "../components/DashCourse/DashCourse";
+import CreateCourse from "../components/CreateCourse/CreateCourse";
+import Messages from "../components/Messages/Messages";
+import Notification from "../components/Notification/Notification";
+import Earning from "../components/Earning/Earning";
+import Payout from "../components/Payout/Payout";
+import Settings from "../components/Settings/Settings";
 
 function AppRoutes() {
   return (
@@ -28,8 +33,13 @@ function AppRoutes() {
         <Route path="/about" element={<AboutScreen />} />
         <Route path="/dashboard" element={<DashboardScreen />}>
           <Route index element={<Dashboard />} />
-          <Route path="courses" element={<SignIn />} />
-          <Route path="create-course" element={<SignUp />} />
+          <Route path="courses" element={<DashCourse />} />
+          <Route path="create-course" element={<CreateCourse />} />
+          <Route path="messages" element={<Messages />} />
+          <Route path="notification" element={<Notification />} />
+          <Route path="earning" element={<Earning />} />
+          <Route path="payout" element={<Payout />} />
+          <Route path="settings" element={<Settings />} />
         </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

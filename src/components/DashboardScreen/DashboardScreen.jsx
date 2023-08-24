@@ -37,10 +37,10 @@ const DashboardScreen = () => {
           <Link to={"/dashboard/create-course"} className="dash_side_icons">
             <GrAddCircle />
           </Link>
-          <Link className="dash_side_icons">
+          <Link to={"/dashboard/messages"} className="dash_side_icons">
             <BiMessageRoundedDetail />
           </Link>
-          <Link className="dash_side_icons">
+          <Link to={"/dashboard/notification"} className="dash_side_icons">
             <IoMdNotificationsOutline />
           </Link>
           <Link className="dash_side_icons">
@@ -49,10 +49,10 @@ const DashboardScreen = () => {
           <Link className="dash_side_icons">
             <AiOutlineStar />
           </Link>
-          <Link className="dash_side_icons">
+          <Link to={"/dashboard/earning"} className="dash_side_icons">
             <FiDollarSign />
           </Link>
-          <Link className="dash_side_icons">
+          <Link to={"/dashboard/payout"} className="dash_side_icons">
             <AiOutlineWallet />
           </Link>
           <Link className="dash_side_icons">
@@ -61,7 +61,7 @@ const DashboardScreen = () => {
           <Link className="dash_side_icons">
             <IoIosCheckmarkCircleOutline />
           </Link>
-          <Link className="dash_side_icons">
+          <Link to={"/dashboard/settings"} className="dash_side_icons">
             <FiSettings />
           </Link>
           <Link className="dash_side_icons">

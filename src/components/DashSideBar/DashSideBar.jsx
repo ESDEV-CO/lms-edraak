@@ -43,13 +43,13 @@ const DashSideBar = () => {
         </span>
         <h5>Create Course</h5>
       </Link>
-      <Link className="dash_sidebar_heading ">
+      <Link to={"/dashboard/messages"} className="dash_sidebar_heading ">
         <span className="dash_sidebar_icon">
           <BiMessageRoundedDetail />
         </span>
         <h5>Messages</h5>
       </Link>
-      <Link className="dash_sidebar_heading ">
+      <Link to={"/dashboard/notification"} className="dash_sidebar_heading ">
         <span className="dash_sidebar_icon">
           <IoMdNotificationsOutline />
         </span>
@@ -67,13 +67,13 @@ const DashSideBar = () => {
         </span>
         <h5>Reviews</h5>
       </Link>
-      <Link className="dash_sidebar_heading ">
+      <Link to={"/dashboard/earning"} className="dash_sidebar_heading ">
         <span className="dash_sidebar_icon">
           <FiDollarSign />
         </span>
         <h5>Earning</h5>
       </Link>
-      <Link className="dash_sidebar_heading ">
+      <Link to={"/dashboard/payout"} className="dash_sidebar_heading ">
         <span className="dash_sidebar_icon">
           <AiOutlineWallet />
         </span>
@@ -91,7 +91,7 @@ const DashSideBar = () => {
         </span>
         <h5>Verifications</h5>
       </Link>
-      <Link className="dash_sidebar_heading ">
+      <Link to={"/dashboard/settings"} className="dash_sidebar_heading ">
         <span className="dash_sidebar_icon">
           <FiSettings />
         </span>
