@@ -1,26 +1,29 @@
 .dashboard_container {
     display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    flex: 1;
+    gap: 0.5rem;
 }
 
 .container_heading {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 1.25rem;
-    color: var(--pri_clr);
     margin-bottom: 1rem;
 
-    & h4 {
-        color: var(--pri_clr);
+    & span {
+        font-size: 1.5rem;
+        color: #686f7a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-}
 
-.dashboard_right_wrapper {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    flex: 1;
-    gap: 0.5rem;
+    & h3 {
+        color: var(--pri_clr);
+        font-weight: 500;
+    }
 }
 
 .dashboard_card_div {
@@ -96,20 +99,53 @@
     }
 }
 
+.course_creation_card {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem 2.5rem;
+    align-items: center;
+    border-radius: 3px;
+
+    & span {
+        font-size: 1.5rem;
+        color: #686f7a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    & h3 {
+        color: var(--pri_clr);
+        font-weight: 500;
+    }
+
+    & button {
+        margin-left: auto;
+    }
+}
+
+@media (min-width:640px) {
+    .dash_featured_courses {
+        width: 91%;
+    }
+
+}
+
 @media (min-width:768px) {
     .dashboard_card_wrapper {
         width: 48%;
         flex-wrap: wrap;
         padding: 1rem 2rem;
     }
+
 }
 
 
 @media (min-width:1024px) {
-    .dashboard_right_wrapper {
+    .dashboard_container {
         padding: 1.5rem;
         flex: 1;
-        gap: 1rem;
+        gap: 1.7rem;
     }
 
     /* .dashboard_card_wrapper {
@@ -119,17 +155,81 @@
     } */
 }
 
-@media (min-width:1280px) {
-    .dashboard_right_wrapper {
-        padding: 1.5rem;
-        flex: 1;
-        gap: 1rem;
+@media (min-width:1200px) {
+    .dashboard_container {
         margin-right: 1rem;
     }
 
     .dashboard_card_wrapper {
-        width: 23.5%;
+        width: 21.5%;
         flex-wrap: wrap;
         padding: 1rem 2rem;
+    }
+
+    .dash_parent_wrapper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+
+    .dash_carousel_wrapper {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.5rem;
+        width: 70%;
+
+    }
+
+    .dash_carousel_left {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        width: 50%;
+        position: relative;
+    }
+
+
+    .dash_previous_btn {
+        position: absolute;
+        right: 8%;
+        top: 0;
+        z-index: 1;
+    }
+
+    .dash_next_btn {
+        position: absolute;
+        right: 1%;
+        top: 0;
+        z-index: 1;
+    }
+
+    .dash_carousel_right {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        width: 50%;
+    }
+
+    .dash_profile_analysis {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 30%;
+    }
+
+    .dash_course_info_wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        border-bottom: 1px solid #efefef;
+        padding-bottom: 0.5rem;
+    }
+
+    .dash_course_info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 }
