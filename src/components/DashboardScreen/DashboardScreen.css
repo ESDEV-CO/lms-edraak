@@ -28,7 +28,7 @@
 }
 
 .dash_screen_outlet {
-    flex: 1;
+    flex: 9.5;
 }
 
 
@@ -40,5 +40,6 @@
         background: white;
         align-items: center;
         justify-content: space-evenly;
+        flex: 0.5;
     }
 }
