@@ -69,7 +69,7 @@ const Navbar = () => {
           />
         </div>
         <div className="navbar_user_info">
-          <button className="primary_btn user_btn">Create New Course</button>
+          <Link to={"/dashboard/create-course"} className="primary_btn user_btn">Create New Course</Link>
           <Link to={"/checkout"} className="user_info_notification">
             <AiOutlineShoppingCart />
           </Link>

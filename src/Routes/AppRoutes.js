@@ -1,12 +1,9 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import HomeScreen from "../Screens/HomeScreen";
+import HomePage from "../Screens/HomePage";
 import SignInScreen from "../Screens/SignInScreen";
 import SignUpScreen from "../Screens/SignUpScreen";
 import CheckOutScreen from "../Screens/CheckOutScreen";
-import ExploreScreen from "../Screens/ExploreScreen";
-import CourseDetailScreen from "../Screens/CourseDetailScreen";
-import StreamScreen from "../Screens/StreamScreen";
 import AboutScreen from "../Screens/AboutScreen";
 import DashboardScreen from "../components/DashboardScreen/DashboardScreen";
 import Dashboard from "../components/Dashboard/Dashboard";
@@ -18,18 +15,25 @@ import Notification from "../components/Notification/Notification";
 import Earning from "../components/Earning/Earning";
 import Payout from "../components/Payout/Payout";
 import Settings from "../components/Settings/Settings";
+import Home from "../components/Home/Home";
+import Explore from "../components/Explore/Explore";
+import CourseDetail from "../components/CourseDetail/CourseDetail";
+import Stream from "../components/Stream/Stream";
 
 function AppRoutes() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<HomeScreen />} />
+        <Route path="/" element={<HomePage />} >
+          <Route index element={<Home />} />
+          <Route path="/explore" element={<Explore />} />
+          <Route path="/course-detail" element={<CourseDetail />} />
+          <Route path="/stream" element={<Stream />} />
+        </Route>
+        <Route path="*" element={<NotFoundPage />} />
         <Route path="/signin" element={<SignInScreen />} />
         <Route path="/signup" element={<SignUpScreen />} />
         <Route path="/checkout" element={<CheckOutScreen />} />
-        <Route path="/explore" element={<ExploreScreen />} />
-        <Route path="/course-detail" element={<CourseDetailScreen />} />
-        <Route path="/stream" element={<StreamScreen />} />
         <Route path="/about" element={<AboutScreen />} />
         <Route path="/dashboard" element={<DashboardScreen />}>
           <Route index element={<Dashboard />} />
@@ -41,7 +45,6 @@ function AppRoutes() {
           <Route path="payout" element={<Payout />} />
           <Route path="settings" element={<Settings />} />
         </Route>
-        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>
   );

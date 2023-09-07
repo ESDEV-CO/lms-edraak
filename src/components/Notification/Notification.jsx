@@ -2,7 +2,7 @@ import React from "react";
 import "./Notification.css";
 
 const Notification = () => {
-  return <div>Notification</div>;
+  return <div className="stream">Coming Soon..</div>;
 };
 
 export default Notification;
